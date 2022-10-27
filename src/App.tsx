@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, useParams } from "react-router-dom";
-import { Home } from "./pages/Home";
+import Home from "./pages/Home";
 import { Login } from "./pages/Login";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/home/id" element={<Home />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   );
 }
