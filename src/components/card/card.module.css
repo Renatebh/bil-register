@@ -1,0 +1,12 @@
+.card {
+  border: 1px solid black;
+  width: 250px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card li {
+  list-style: none;
+}

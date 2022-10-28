@@ -1,12 +1,13 @@
-import Form from '../components/form/Form'
-import React from 'react'
+import Form from "../components/form/AddCarForm";
+import React from "react";
 
 const AddData = () => {
   return (
     <div>
-        <Form/>
+      <h1>Add Data</h1>
+      <Form />
     </div>
-  )
-}
+  );
+};
 
-export default AddData
+export default AddData;
