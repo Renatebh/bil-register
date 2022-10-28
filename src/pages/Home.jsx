@@ -1,31 +1,25 @@
-import { InformationEvent } from "http";
 import { useState, useEffect } from "react";
-import { useFetch, BASE_URL } from "../components/Fetch/useFetch";
+import { useFetch } from "../components/Fetch/useFetch";
 
 const Home = () => {
-  const { info, loading, error } = useFetch(`${BASE_URL}`);
-  // const [allCars, setAllCars] = useState<CarsType[]>([info.cars]);
+  const { info, loading, error } = useFetch("http://194.32.107.29/GaAPI");
 
-  console.log(info);
-  // setAllCars(info);
-
-  // useFetch(BASE_URL);
-  // console.log(allCars);
-  // console.log(data);
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return console.log(error);
 
   return (
     <>
-      {/* <button onClick={useFetch}>Klikk her</button> */}
-      {/* {allCars.map((props, index) => { */}
-      {/* return ( */}
-      <ul>
-        <li>{info?.cars}</li>
-        {/* <li>{props.model}</li> */}
-        {/* <li>{props.make}</li> */}
-        {/* <li>{props.year}</li> */}
-      </ul>
-      {/* ); */}
-      {/* })} */}
+      {info.cars &&
+        info.cars.map((car, index) => {
+          return (
+            <ul>
+              <li>{car.id}</li>
+              <li>{car.model}</li>
+              <li>{car.make}</li>
+              <li>{car.year}</li>
+            </ul>
+          );
+        })}
     </>
   );
 };
