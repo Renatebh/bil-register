@@ -1,6 +1,6 @@
 import useFetch from "../../hooks/useFetch";
-import Card from "../card/Card";
-// import styles from "./car.module.css";
+import PersonCard from "../card/PersonCard";
+import styles from "./person.module.css";
 
 const Person = () => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
@@ -10,11 +10,11 @@ const Person = () => {
 
   return (
     <>
-      <div className={styles["#"]}>
+      <div className={styles["person-wrapper"]}>
         {data.persons &&
           data.persons.map((index, value) => {
             return (
-              <Card
+              <PersonCard
                 key={value}
                 id={index.id}
                 firstName={index.firstName}
