@@ -1,6 +1,5 @@
 import useFetch from "../../hooks/useFetch";
 import Card from "../card/Card";
-import Form from "../form/Form";
 
 const Car = () => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
@@ -14,11 +13,9 @@ const Car = () => {
         <h1>Car</h1>
       </div>
       <div>
-        <Form />
       </div>
       {data.cars &&
         data.cars.map((index, value) => {
-          console.log(data.cars);
           return (
             <Card
               key={value}

@@ -3,7 +3,7 @@ import Car from "../components/cars/Car";
 const Home = () => {
   return (
     <>
-      <Car />
+    <Car/>
     </>
   );
 };
