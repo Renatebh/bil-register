@@ -6,6 +6,10 @@ const Card = (props) => {
         <li>{props.make}</li>
         <li>{props.model}</li>
         <li>{props.year}</li>
+        <li>
+          {props.firstName} {props.lastName}
+        </li>
+        <li>{props.age}</li>
       </ul>
     </div>
   );

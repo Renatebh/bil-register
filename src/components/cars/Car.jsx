@@ -1,5 +1,6 @@
 import useFetch from "../../hooks/useFetch";
 import Card from "../card/Card";
+import { useState, useEffect } from "react";
 
 const Car = () => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
@@ -12,9 +13,9 @@ const Car = () => {
       <div>
         <h1>Car</h1>
       </div>
-      <div>
-      </div>
+      <div></div>
       {data.cars &&
+        data.persons &&
         data.cars.map((index, value) => {
           return (
             <Card
