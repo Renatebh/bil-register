@@ -1,14 +1,6 @@
 const inputs = [
   {
     id: 1,
-    name: "Id",
-    type: "number",
-    placeholder: "Id",
-    errorMessage: "ID må fylles ut",
-    required: true,
-  },
-  {
-    id: 2,
     name: "make",
     type: "text",
     placeholder: "Merke",
@@ -16,7 +8,7 @@ const inputs = [
     required: true,
   },
   {
-    id: 3,
+    id: 2,
     name: "model",
     type: "text",
     placeholder: "Model",
@@ -24,7 +16,7 @@ const inputs = [
     required: true,
   },
   {
-    id: 4,
+    id: 3,
     name: "year",
     type: "number",
     placeholder: "Årsmodell",

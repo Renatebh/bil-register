@@ -6,7 +6,6 @@ import axios from "axios";
 
 const Form = () => {
   const [values, setValues] = useState({
-    id: "",
     make: "",
     model: "",
     year: "",

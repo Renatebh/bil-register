@@ -6,7 +6,6 @@ const useFetch = (url) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  //   const url = "http://194.32.107.29/GaAPI";
   useEffect(() => {
     setLoading(true);
     axios
