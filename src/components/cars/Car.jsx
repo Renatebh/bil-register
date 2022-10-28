@@ -1,12 +1,12 @@
 import useFetch from "../../hooks/useFetch";
 import Card from "../card/Card";
-import { useState, useEffect } from "react";
 
 const Car = () => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
+
 
   return (
     <>
@@ -24,6 +24,7 @@ const Car = () => {
               make={index.make}
               model={index.model}
               year={index.year}
+              // onClick={index.onClick}
             />
           );
         })}
