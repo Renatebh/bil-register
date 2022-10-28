@@ -1,26 +1,26 @@
-import React, { useState, useRef } from "react";
+import { useState } from "react";
 import FormInput from "./Forminput";
 import inputs from "./Inputs";
-import styles from "../cars/car.module.css";
+import styles from "./form.module.css";
 import axios from "axios";
 
 const Form = () => {
   const [values, setValues] = useState({
     make: "",
     model: "",
-    year: "",
+    year: ""
   });
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  // const form = useRef();
-
   const sendData = () => {
     axios.post("http://194.32.107.29/GaAPI/car", {
-      ...values,
+      ...values
     });
+    alert("Ny bil er lagt til!");
+    console.log("Car added");
   };
 
   return (

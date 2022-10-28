@@ -1,7 +1,7 @@
-import useFetch from "../../hooks/useFetch";
+
 import { useEffect } from "react";
 import axios from "axios";
-import Car from "../cars/Car";
+import styles from "./card.module.css";
 
 const Card = (props) => {
 
@@ -17,12 +17,12 @@ const Card = (props) => {
   });
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       <ul>
-        <li>{props.id}</li>
-        <li>{props.make}</li>
-        <li>{props.model}</li>
-        <li>{props.year}</li>
+        <li>Id: {props.id}</li>
+        <li>Merke: {props.make}</li>
+        <li>Model: {props.model}</li>
+        <li>Årsmodell: {props.year}</li>
       </ul>
       <button onClick={() => deleteCar(props.id)}>Delete</button>
     </div>
