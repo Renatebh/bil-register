@@ -14,13 +14,13 @@ const Car = () => {
         {data.cars &&
           data.cars.map((index, value) => {
             return (
-                <Card
-                  key={value}
-                  id={index.id}
-                  make={index.make}
-                  model={index.model}
-                  year={index.year}
-                />
+              <Card
+                key={value}
+                id={index.id}
+                make={index.make}
+                model={index.model}
+                year={index.year}
+              />
             );
           })}
       </div>
