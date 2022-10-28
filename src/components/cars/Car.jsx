@@ -14,7 +14,6 @@ const Car = () => {
         {data.cars &&
           data.cars.map((index, value) => {
             return (
-              <>
                 <Card
                   key={value}
                   id={index.id}
@@ -22,7 +21,6 @@ const Car = () => {
                   model={index.model}
                   year={index.year}
                 />
-              </>
             );
           })}
       </div>
