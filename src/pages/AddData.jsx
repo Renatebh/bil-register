@@ -13,7 +13,6 @@ const AddData = () => {
         <Navbar />
       </header>
       <main>
-        <AddCarForm />
         <div>
           <AddPersonForm />
         </div>
