@@ -3,9 +3,9 @@
 .logo {
   margin-left: 1rem;
   font-weight: bold;
-  font-family: var(--link-font);
+  font-family: var(--header-font);
 }
 
 .logo a {
-  color: var(--secondary-clr);
+  color: var(--white);
 }

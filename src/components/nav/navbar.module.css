@@ -2,7 +2,7 @@
 .navbar {
   width: 100%;
   height: 80px;
-  background-color: var(--primary-clr);
+  background-color: var(--primaryColor);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,10 +21,10 @@
 }
 
 .link-item {
-  border: 1px solid var(--primary-clr);
+  border: 1px solid var(--white);
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: var(--secondary-clr);
+  color: var(--white);
 }
 
 a {
@@ -34,5 +34,4 @@ a {
 
 nav li {
   list-style: none;
-  color: var(--primary-clr);
 }
