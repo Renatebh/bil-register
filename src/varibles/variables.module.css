@@ -2,11 +2,13 @@
 
 :root {
   /* COLORS */
-  --primary-clr: #000000;
-  --secondary-clr: #fff;
-  --accent-clr: #ffcc70;
-  --input-clr: grey;
+
+  --primaryColor: #00406a;
+  --secondaryColor: #099eff;
+  --black: #000000;
+  --white: #fff;
   --blackTransparent: rgba(0, 0, 0, 0.74);
+  --greyColor: #525252;
   /* GRADIENT COLORS */
   --gradientColor: linear-gradient(
     43deg,
