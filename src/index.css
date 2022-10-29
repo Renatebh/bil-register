@@ -4,13 +4,24 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  /* color: #fff; */
+body {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  min-height: 100vh;
-  /* background-color: rgb(41, 47, 52); */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
 }

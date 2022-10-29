@@ -1,0 +1,39 @@
+.navbar {
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 1rem;
+  background-color: antiquewhite;
+}
+
+.links-list {
+  height: 3rem;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.link-item {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav li {
+  list-style: none;
+  color: black;
+}

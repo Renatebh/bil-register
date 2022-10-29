@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@100;300;400;600;700;900&family=Lato:wght@100&family=Montserrat:wght@100;200;300;400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;900&family=Varela+Round&display=swap");
+
+:root {
+  /* COLORS */
+  --primary-clr: #000000;
+  --secondary-clr: #fff;
+  --accent-clr: #ffcc70;
+  --input-clr: grey;
+  --blackTransparent: rgba(0, 0, 0, 0.74);
+  /* GRADIENT COLORS */
+  --gradientColor: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  --gradientColorReverse: linear-gradient(
+    -43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  /* BOX SHADOWS */
+  --box-shadow-light: 7px 0px 100px 2px #fff;
+  --box-shadow-medium: 6px 6px 24px 1px #bababa;
+  --box-shadow-dark: 1px -1px 30px 1px rgb(15, 15, 15);
+  /* FONT TYPES */
+  --header-font: "Varela Round", sans-serif;
+  --paragraph-font: "Lato", sans-serif;
+  --link-font: "Inter", sans-serif;
+
+  /* Fluid FONT SIZE steps */
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,30,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  --step--2: clamp(0.78rem, calc(0.62rem + 0.82vw), 1.2rem);
+  --step--1: clamp(1.8rem, calc(0.8rem + 1.39vw), 1.6rem);
+  --step-0: clamp(1.13rem, calc(0.83rem + 1.46vw), 1.88rem);
+  --step-1: clamp(1.35rem, calc(0.96rem + 1.94vw), 2.34rem);
+  --step-2: clamp(1.62rem, calc(1.11rem + 2.56vw), 2.93rem);
+  --step-3: clamp(1.94rem, calc(1.27rem + 3.35vw), 3.66rem);
+  --step-4: clamp(2.33rem, calc(1.46rem + 4.38vw), 4.58rem);
+  --step-5: clamp(2.8rem, calc(1.66rem + 5.7vw), 5.72rem);
+}
