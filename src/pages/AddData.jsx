@@ -9,12 +9,10 @@ const AddData = () => {
       <header>
         <Navbar />
       </header>
-      <div>
+      <main>
         <AddCarForm />
-      </div>
-      <div>
         <Car />
-      </div>
+      </main>
     </>
   );
 };
