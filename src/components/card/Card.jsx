@@ -1,21 +1,19 @@
-// import { useEffect } from "react";
+import { createContext } from "react";
 import axios from "axios";
 import styles from "./card.module.css";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const Card = (props) => {
   const navigate = useNavigate();
+  // const { carID } = useParams();
+
   const deleteCar = (id) => {
     axios.delete(`http://194.32.107.29/GaAPI/car/${id}`);
     alert(id);
   };
 
   const updateCar = (id) => {
-    console.log(id);
-    navigate("/updateData", { id });
-
-    // axios.put(`http://194.32.107.29/GaAPI/car/${id}`);
-    // alert(`data updated successfully`);
+    navigate(`/updateData/${id}`);
   };
 
   const getUpdatedData = () => {
@@ -33,7 +31,7 @@ const Card = (props) => {
       <button
         onClick={() => {
           deleteCar(props.id);
-          getUpdatedData();
+          getUpdatedData(props.id);
         }}
       >
         Delete

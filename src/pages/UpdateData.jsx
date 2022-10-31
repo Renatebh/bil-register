@@ -3,7 +3,7 @@ import Navbar from "../components/nav/Navbar";
 import UpdateCarForm from "../components/form/UpdateCarForm";
 // import AddPersonForm from "../components/form/AddPersonForm";
 // import Car from "../components/cars/Car";
-const UpdateData = (props) => {
+const UpdateData = (id) => {
   return (
     <>
       <header>
@@ -14,7 +14,7 @@ const UpdateData = (props) => {
           <AddPersonForm />
         </div> */}
         <div>
-          <UpdateCarForm key={props} value={props} />
+          <UpdateCarForm value={id} />
         </div>
         {/* <div>
           <Person />
