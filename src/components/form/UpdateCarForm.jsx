@@ -48,10 +48,10 @@ const Form = () => {
           />
           <label htmlFor="">Year</label>
           <input
-            type="text"
+            type="number"
             name="year"
             placeholder={updateCar.year}
-            onChange={(e) => setYear(e.target.value)}
+            onChange={(e) => setYear(e.target.valueAsNumber)}
           />
           <input
             type="submit"

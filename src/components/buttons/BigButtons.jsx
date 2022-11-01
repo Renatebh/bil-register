@@ -1,10 +1,7 @@
-import React from 'react'
+import styles from "./button.module.css";
 
 const BigButtons = (props) => {
+  return <button className={styles["big-btn"]}>{props.text}</button>;
+};
 
-  return (
-      <button>{props.text}</button>
-  )
-}
-
-export default BigButtons
+export default BigButtons;

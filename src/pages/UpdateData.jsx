@@ -1,6 +1,7 @@
 import Navbar from "../components/nav/Navbar";
 // import Person from "../components/persons/Persons";
 import UpdateCarForm from "../components/form/UpdateCarForm";
+import BigButtonsBox from "../components/buttons/BigButtonsBox";
 // import AddPersonForm from "../components/form/AddPersonForm";
 // import Car from "../components/cars/Car";
 const UpdateData = (id) => {
@@ -10,6 +11,7 @@ const UpdateData = (id) => {
         <Navbar />
       </header>
       <main>
+        <BigButtonsBox />
         {/* <div>
           <AddPersonForm />
         </div> */}
