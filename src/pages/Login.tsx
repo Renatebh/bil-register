@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./login.module.css";
-
+import Home from "./Home.jsx";
 const Login = () => {
   const userRef = useRef<HTMLInputElement>(null);
   const errRef = useRef<any>();
@@ -53,13 +53,7 @@ const Login = () => {
   return (
     <>
       {success ? (
-        <section className={styles[""]}>
-          <h1>You are logged in!</h1>
-          <br />
-          <p>
-            <a href="#">Go to Home</a>
-          </p>
-        </section>
+        <Home />
       ) : (
         <section>
           <p
