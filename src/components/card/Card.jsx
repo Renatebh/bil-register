@@ -5,7 +5,6 @@ import styles from "./card.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 const Card = (props) => {
   const navigate = useNavigate();
-  // const { carID } = useParams();
 
   const deleteCar = (id) => {
     axios.delete(`http://194.32.107.29/GaAPI/car/${id}`);

@@ -13,13 +13,7 @@ const AddData = () => {
       </header>
       <main>
         <div>
-          <AddPersonForm />
-        </div>
-        <div>
           <AddCarForm />
-        </div>
-        <div>
-          <Person />
         </div>
         <Car />
       </main>
