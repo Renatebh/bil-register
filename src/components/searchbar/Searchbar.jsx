@@ -7,23 +7,38 @@ const Searchbar = () => {
   console.log([data]);
   const [searchData, setSearchData] = useState("");
 
-  const findData = (props, searchData) => {
+  const findData = (array, searchData) => {
+    //   // console.log(
+    //   // //   array.filter((el) => el.includes(searchData))
+    //   //   //   data.filter(el),
+    //   //   //   el.toLowerCase().includes(query.toLowerCase())
+    //   // );
     console.log(
-      props.car.filter((el) => el.includes(searchData))
-      //   data.filter(el),
-      //   el.toLowerCase().includes(query.toLowerCase())
+      "filtered results: ",
+      array.map((element) => {
+        return {
+          ...element,
+          cars: array.cars.filter((car) => car.includes(searchData))
+        };
+      })
     );
   };
 
   const onChange = (e) => {
     // setSearchData({ [e.target.value] });
     setSearchData({ ...searchData, [e.target.name]: e.target.value });
-    findData(data, searchData);
+
     console.log("searchData", searchData);
+    findData([data], searchData);
   };
   return (
     <div>
       <input placeholder="Search here " onChange={onChange}></input>
+      {/* <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.text}</li>
+        ))}
+      </ul> */}
       {/* <div>{searchData}</div> */}
     </div>
   );
