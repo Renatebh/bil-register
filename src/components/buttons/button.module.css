@@ -17,4 +17,10 @@
   background-color: var(--primaryColor);
   color: var(--white);
   font-weight: bold;
+  border: none;
+}
+
+.big-btn:hover {
+  cursor: pointer;
+  background-color: var(--greyColor);
 }
