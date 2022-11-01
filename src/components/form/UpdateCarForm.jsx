@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import FormInput from "./Forminput";
 import inputs from "./Inputs";
 import styles from "./form.module.css";
@@ -6,34 +6,30 @@ import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 
-const Form = () => {
+const Form = (props) => {
   const { carID } = useParams();
   const { data } = useFetch(`http://194.32.107.29/GaAPI/car/${carID}`);
-  const [car, setCar] = useState([data]);
-  console.log("Få se:", data);
+  const [updateCar, setUpdateCar] = useState({});
+  const [make, setMake] = useState("");
+  const [model, setModel] = useState("");
+  const [year, setYear] = useState("");
 
-  const [values, setValues] = useState({
-    make: data.make,
-    model: data.model,
-    year: data.year
-  });
+  useEffect(() => {
+    setUpdateCar(data);
+    setMake(data.make);
+    setModel(data.model);
+    setYear(data.year);
+  }, [data]);
 
-  // console.log("data", data);
-  console.log("id", data);
-  // const [values, setValues] = useState(data);
-
-  console.log("values:" + values);
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
-  // if (data) return data;
-
-  // if (loading) return <h1>Loading...</h1>;
-  // if (error) console.log(error);
+  // console.log("Få se:", data);
+  // console.log("values:", values);
 
   const updateData = () => {
-    axios.put(`http://194.32.107.29/GaAPI/car/${carID}`);
+    axios.put(`http://194.32.107.29/GaAPI/car/${carID}`, {
+      make: make,
+      model: model,
+      year: year
+    });
     alert("Data updated");
   };
 
@@ -50,20 +46,42 @@ const Form = () => {
       <form>
         <fieldset>
           <h3>Oppdater bil</h3>
-          {data &&
-            car.map((car) =>
-              inputs.map((input) => {
-                return (
-                  <FormInput
-                    key={input.id}
-                    {...input}
-                    value={values[car.name]}
-                    onChange={onChange}
-                    className={styles["form-input"]}
-                  />
-                );
-              })
-            )}
+          {/* {inputs.map((input) => {
+            return (
+              <FormInput
+                key={input.id}
+                {...input}
+                value={values[input.name]}
+                onChange={onChange}
+                className={styles["form-input"]}
+              />
+            );
+          })} */}
+          <input
+            type="text"
+            name="make"
+            // value={make}
+            placeholder={updateCar.make}
+            onChange={(e) => setMake(e.target.value)}
+          />
+
+          <label htmlFor="">Model</label>
+          <input
+            type="text"
+            name="model"
+            // value={model}
+            placeholder={updateCar.model}
+            onChange={(e) => setModel(e.target.value)}
+          />
+
+          <label htmlFor="">Year</label>
+          <input
+            type="text"
+            name="year"
+            // value={year}
+            placeholder={updateCar.year}
+            onChange={(e) => setYear(e.target.value)}
+          />
           <input
             type="submit"
             value="Oppdater"

@@ -9,9 +9,6 @@ import useFetch from "./hooks/useFetch";
 
 function App() {
   const { carID } = useParams();
-  const { data, loading, error } = useFetch(
-    `http://194.32.107.29/GaAPI/car/${carID}`
-  );
   const params = useParams();
   // props.id = useParams();
   console.log(params);
