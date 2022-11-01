@@ -8,20 +8,18 @@ const Searchbar = () => {
   const [searchData, setSearchData] = useState("");
 
   const findData = (array, searchData) => {
-    //   // console.log(
-    //   // //   array.filter((el) => el.includes(searchData))
-    //   //   //   data.filter(el),
-    //   //   //   el.toLowerCase().includes(query.toLowerCase())
-    //   // );
-    console.log(
-      "filtered results: ",
-      array.map((element) => {
-        return {
-          ...element,
-          cars: array.cars.filter((car) => car.includes(searchData))
-        };
-      })
-    );
+    const result = array
+      .flatMap((item) => item.cars)
+      .filter((item) => item.id === 31); //working with id number
+    // reference: https://stackoverflow.com/questions/72348956/how-to-map-through-a-deeply-nested-array-of-objects
+   
+   
+   // tried this but not working
+       // .filter((item) => item.make.includes(searchData));
+    console.log("result", result);
+
+    const result2 = array.flatMap((item) => item.id === 1);
+    console.log("result 2 :", result2);
   };
 
   const onChange = (e) => {
