@@ -4,14 +4,15 @@ import styles from "./home.module.css";
 import Navbar from "../components/nav/Navbar";
 import Table from "../components/table/Table";
 import { useState, useEffect } from "react";
+import TablePersonMap from "../components/table/TablePersonMap";
 
 const Home = () => {
   const { carsData, personsData, loading, error } = useFetch(
     "http://194.32.107.29/GaAPI"
   );
-  const [tableData, setTableData] = useState();
-  console.log(carsData);
+  const [tableData, setTableData] = useState([]);
   console.log(personsData);
+  console.log(tableData);
 
   useEffect(() => {
     setTableData(carsData);
@@ -21,13 +22,13 @@ const Home = () => {
   if (error) console.log(error);
 
   const column = [
-    { heading: "Id", value: 'dataCars.id' },
-    { heading: "Bilmerke", value: 'dataCars.make' },
-    { heading: "Model", value: 'dataCars.model' },
-    { heading: "Årsmodell", value: 'dataCars.year' },
-    { heading: "FirstName", value: 'dataPersons.firstName' },
-    { heading: "LastName", value: 'dataPersons.lastName' },
-    { heading: "Age", value: 'dataPersons.age' },
+    { heading: "Id", value: 'id' },
+    { heading: "Bilmerke", value: 'make' },
+    { heading: "Model", value: 'model' },
+    { heading: "Årsmodell", value: 'year' },
+    { heading: "FirstName", value: 'firstName' },
+    { heading: "LastName", value: 'lastName' },
+    { heading: "Age", value: 'age' },
     { heading: "Action", value: "" }
   ];
 
@@ -43,6 +44,7 @@ const Home = () => {
           <h3>Cars</h3>
           <Car />
         </div> */}
+        <TablePersonMap/>
       </main>
     </>
   );
