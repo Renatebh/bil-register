@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
-const Dropdown = () => {
+const Dropdown = ({ changeCarId }) => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
   const [carSelected, setCarSelected] = useState([]);
 
   useEffect(() => {
-    console.log(carSelected);
-  }, [carSelected, setCarSelected]);
+    changeCarId(carSelected);
+  }, [carSelected]);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
