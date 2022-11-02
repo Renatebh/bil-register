@@ -21,6 +21,14 @@ const Table = ({ column }) => {
             )
             // ))
           )}
+        {personsData &&
+          personsData.map(
+            (item, index) => (
+              // personsData.map((item, index) => (
+              <TableRow key={index} item={item} column={column} />
+            )
+            // ))
+          )}
       </tbody>
     </table>
   );
@@ -30,7 +38,7 @@ const TableHeadItem = ({ item }) => <th>{item.heading}</th>;
 const TableRow = ({ item, column }) => (
   <tr>
     {column.map((columnItem, index) => {
-        return <td key={index}>{item[`${columnItem.value}`]}</td>;
+      return <td key={index}>{item[`${columnItem.value}`]}</td>;
     })}
   </tr>
 );

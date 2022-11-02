@@ -9,14 +9,14 @@ const TablePersonMap = () => {
     <div>
       {personsData.map((person) => {
         return (
-          <>
+          <tbody>
             <tr>
               <td>{person.firstName}</td>
               <td>{person.lastName}</td>
               <td>{person.age}</td>
               <td>{person.carsOwned}</td>
             </tr>
-          </>
+          </tbody>
         );
       })}
     </div>

@@ -4,14 +4,13 @@ import styles from "./home.module.css";
 import Navbar from "../components/nav/Navbar";
 import Table from "../components/table/Table";
 import { useState, useEffect } from "react";
-import TablePersonMap from "../components/table/TablePersonMap";
+// import TablePersonMap from "../components/table/TablePersonMap";
 
 const Home = () => {
   const { carsData, personsData, loading, error } = useFetch(
     "http://194.32.107.29/GaAPI"
   );
   const [tableData, setTableData] = useState([]);
-  console.log(personsData);
   console.log(tableData);
 
   useEffect(() => {
@@ -44,7 +43,7 @@ const Home = () => {
           <h3>Cars</h3>
           <Car />
         </div> */}
-        <TablePersonMap/>
+        {/* <TablePersonMap/> */}
       </main>
     </>
   );
