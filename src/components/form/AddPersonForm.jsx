@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormInput from "./Forminput";
+import Dropdown from "../dropdown/Dropdown";
 import inputsPersons from "./InputsPersons";
 import styles from "./form.module.css";
 import axios from "axios";
@@ -46,9 +47,7 @@ const Form = () => {
             );
           })}
 
-          <select name="chooseCar" id="chooseCar">
-            <option value="">Velg bil</option>
-          </select>
+          <Dropdown />
           <input
             type="submit"
             value="Legg til"
