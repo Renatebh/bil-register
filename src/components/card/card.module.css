@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   font-size: var(--step--2);
+  border-radius: 5px;
 }
 
 .card li {
@@ -17,13 +18,12 @@
 }
 
 .card-info-container {
-  display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
 .car-image {
   width: 100%;
+  border-radius: 5px;
 }
 
 .card-info-container div {
@@ -39,12 +39,17 @@
 }
 
 .button-container {
-  margin-top: 1rem;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 .button-container button {
-  padding: 8px 25px;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 27px;
+  background-color: var(--primaryColor);
 }
