@@ -3,8 +3,12 @@ import FormInput from "./Forminput";
 import inputsPersons from "./InputsPersons";
 import styles from "./form.module.css";
 import axios from "axios";
+import useFetch from "../../hooks/useFetch";
 
 const Form = () => {
+  const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
+  
+
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -24,10 +28,8 @@ const Form = () => {
     console.log("Person er lagt til");
   };
 
-  const getCars = () => {
-    axios.get("http://194.32.107.29/GaAPI");
-  };
-  console.log(getCars);
+
+  
 
   return (
     <div>
