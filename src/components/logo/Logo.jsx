@@ -1,11 +1,18 @@
-import style from "./logo.module.css";
+import styles from "./logo.module.css";
+import bilregisterLogo from "./bilregister_logo.png";
 import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
     <>
-      <p className={style.logo}>
-        <Link to="./home">BIL-REGISTER.</Link>
+      <p className={styles.logo}>
+        <Link to="./home">
+          <img
+            src={bilregisterLogo}
+            alt="Bilregister logo"
+            className={styles["bilregister-logo"]}
+          />
+        </Link>
       </p>
     </>
   );
