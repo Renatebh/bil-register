@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import styles from "./login.module.css";
 import Home from "./Home.jsx";
 const Login = () => {
@@ -84,7 +85,9 @@ const Login = () => {
               value={pwd}
               required
             />
-            <button>Login</button>
+            <Link to="/home">
+              <button>Login</button>
+            </Link>
           </form>
         </section>
       )}
