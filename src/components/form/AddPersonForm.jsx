@@ -24,6 +24,11 @@ const Form = () => {
     console.log("Person er lagt til");
   };
 
+  const getCars = () => {
+    axios.get("http://194.32.107.29/GaAPI");
+  };
+  console.log(getCars);
+
   return (
     <div>
       <form>
@@ -40,6 +45,10 @@ const Form = () => {
               />
             );
           })}
+
+          <select name="chooseCar" id="chooseCar">
+            <option value="">Velg bil</option>
+          </select>
           <input
             type="submit"
             value="Legg til"

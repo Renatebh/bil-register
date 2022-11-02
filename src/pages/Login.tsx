@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
-
+// import styles from "./login.module.css";
+import Home from "./Home.jsx";
 const Login = () => {
   const userRef = useRef<HTMLInputElement>(null);
   const errRef = useRef<any>();
@@ -9,34 +10,50 @@ const Login = () => {
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    if (userRef.current != null) {
-      userRef.current.focus();
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (userRef.current != null) {
+  //     userRef.current.focus();
+  //   }
+  // }, []);
 
   useEffect(() => {
     setErrMsg("");
   }, [user, pwd]);
 
+  //  const checkUserPwd = () => {
+  //  let user = "";
+  //  let pwd = ""; {
+  // //   if (user && pwd === "admin") {
+
+  // //  }
+  //  }
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log(user, pwd);
-    setUser("");
-    setPwd("");
-    setSuccess(true);
+    // console.log(user, pwd);
+    // setUser("");
+    // setPwd("");
+
+    if (user === "admin" && pwd === "admin") {
+      setSuccess(true);
+    } else if (user !== "admin" && pwd !== "admin") {
+      setErrMsg("Feil username og passord");
+    } else if (user || pwd !== "admin") {
+      if (user !== "admin") {
+        setErrMsg("Feil username");
+      } else if (pwd !== "admin") {
+        setErrMsg("Feil passord");
+      }
+    }
+    // else {
+    //   setErrMsg("");
+    // }
   };
 
   return (
     <>
       {success ? (
-        <section>
-          n<h1>You are logged in!</h1>
-          <br />
-          <p>
-            <a href="/home">Go to Home</a>
-          </p>
-        </section>
+        <Home />
       ) : (
         <section>
           <p

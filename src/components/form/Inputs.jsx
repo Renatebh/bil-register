@@ -5,7 +5,7 @@ const inputs = [
     type: "text",
     placeholder: "Merke",
     errorMessage: "Merke må fylles ut",
-    required: true,
+    required: true
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const inputs = [
     type: "text",
     placeholder: "Model",
     errorMessage: "Model må fylles ut",
-    required: true,
+    required: true
   },
   {
     id: 3,
@@ -21,8 +21,8 @@ const inputs = [
     type: "number",
     placeholder: "Årsmodell",
     errorMessage: "Årsmodell må fylles ut",
-    required: true,
-  },
+    required: true
+  }
 ];
 
 export default inputs;

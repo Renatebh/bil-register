@@ -22,14 +22,6 @@ const inputs = [
     placeholder: "Alder",
     errorMessage: "Alder må fylles ut",
     required: true
-  },
-  {
-    id: 4,
-    name: "carsOwned",
-    type: "text",
-    placeholder: "Bilmodel",
-    errorMessage: "Du må fylle ut bilmodel",
-    required: true
   }
 ];
 
