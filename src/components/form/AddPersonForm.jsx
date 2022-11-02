@@ -15,31 +15,24 @@ const Form = () => {
   const [carId, setCarId] = useState({ carsOwned: "" });
   const [postData, setPostData] = useState({});
   useEffect(() => {
-    console.log("parent: " + carId);
     setPostData(jointData);
   }, [carId]);
 
   const changeCarId = (carId) => {
     setCarId({ carsOwned: carId });
-    // console.log("parent: " + carId);
   };
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const jointData = { ...values, ...carId };
-  console.log("joint", jointData);
 
-  console.log("postdata", postData);
   const sendData = () => {
-    setPostData(jointData);
-    console.log("postdata", postData);
     axios.post("http://194.32.107.29/GaAPI/person", {
-      postData
+      ...postData
     });
-    // console.log("posted data", ...postData);
+
     alert("Ny person er registrert!");
-    console.log("Person er lagt til");
   };
 
   const getCars = () => {
