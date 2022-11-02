@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../components/nav/Navbar";
-import AddPersonForm from "../components/form/AddPersonForm";
-import Persons from "../components/persons/Persons";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
+import AddPersonForm from "../components/form/AddPersonForm";
+import PersonsList from "../components/persons/Persons";
 
 const AddPerson = () => {
   return (
@@ -12,10 +12,8 @@ const AddPerson = () => {
       </header>
       <main>
         <BigButtonsBox />
-        <div>
-          <AddPersonForm />
-        </div>
-        <Persons />
+        <AddPersonForm />
+        <PersonsList />
       </main>
     </>
   );

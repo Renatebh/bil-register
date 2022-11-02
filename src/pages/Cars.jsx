@@ -1,8 +1,8 @@
+import CarList from "../components/cars/Car";
 import Navbar from "../components/nav/Navbar";
-import UpdateCarForm from "../components/form/UpdateCarForm";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
 
-const UpdateData = (id) => {
+const Cars = () => {
   return (
     <>
       <header>
@@ -10,11 +10,10 @@ const UpdateData = (id) => {
       </header>
       <main>
         <BigButtonsBox />
-
-        <UpdateCarForm value={id} />
+        <CarList />
       </main>
     </>
   );
 };
 
-export default UpdateData;
+export default Cars;

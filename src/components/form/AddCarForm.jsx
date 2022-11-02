@@ -25,7 +25,7 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={sendData}>
+      <form>
         <fieldset>
           <h3>Legg til bil</h3>
           {inputs.map((input) => {

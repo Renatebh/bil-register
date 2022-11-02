@@ -1,8 +1,9 @@
 import Navbar from "../components/nav/Navbar";
-import UpdateCarForm from "../components/form/UpdateCarForm";
+
+import PersonsList from "../components/persons/Persons";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
 
-const UpdateData = (id) => {
+const Persons = () => {
   return (
     <>
       <header>
@@ -10,11 +11,10 @@ const UpdateData = (id) => {
       </header>
       <main>
         <BigButtonsBox />
-
-        <UpdateCarForm value={id} />
+        <PersonsList />
       </main>
     </>
   );
 };
 
-export default UpdateData;
+export default Persons;
