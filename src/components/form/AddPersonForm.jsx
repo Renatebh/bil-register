@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormInput from "./Forminput";
+import Dropdown from "../dropdown/Dropdown";
 import inputsPersons from "./InputsPersons";
 import styles from "./form.module.css";
 import axios from "axios";
@@ -12,20 +13,30 @@ const Form = () => {
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
-    age: "",
-    carsOwned: ""
+    age: ""
   });
+
+  const [carId, setCarId] = useState({ carsOwned: "" });
+  const [postData, setPostData] = useState({});
+  useEffect(() => {
+    setPostData(jointData);
+  }, [carId]);
+
+  const changeCarId = (carId) => {
+    setCarId({ carsOwned: carId });
+  };
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+  const jointData = { ...values, ...carId };
 
   const sendData = () => {
     axios.post("http://194.32.107.29/GaAPI/person", {
-      ...values
+      ...postData
     });
+
     alert("Ny person er registrert!");
-    console.log("Person er lagt til");
   };
 
 
@@ -48,9 +59,7 @@ const Form = () => {
             );
           })}
 
-          <select name="chooseCar" id="chooseCar">
-            <option value="">Velg bil</option>
-          </select>
+          <Dropdown changeCarId={changeCarId} />
           <input
             type="submit"
             value="Legg til"
