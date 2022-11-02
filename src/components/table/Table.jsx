@@ -1,22 +1,23 @@
 // import useFetch from "../../hooks/useFetch";
 import styles from "./table.module.css";
 
-const Table = ({ data, column }) => {
+const Table = ({ carsData, personsData, column }) => {
+
   return (
     <table className={styles["table"]}>
       <thead>
         <tr>
           {column.map((item, index) => (
-            <TableHeadItem item={item} />
+            <TableHeadItem key={index} item={item} />
           ))}
         </tr>
       </thead>
       <tbody>
-        {data.cars &&
-          data.persons &&
-          data.cars.map((item, index) =>
-            data.persons.map((item, index) => (
-              <TableRow item={item} column={column} />
+        {carsData &&
+          personsData &&
+          carsData.map((item, index) =>
+            personsData.map((item, index) => (
+              <TableRow key={index} item={item} column={column} />
             ))
           )}
       </tbody>

@@ -6,29 +6,28 @@ import Table from "../components/table/Table";
 import { useState, useEffect } from "react";
 
 const Home = () => {
-  const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
+  const { carsData, personsData, loading, error } = useFetch(
+    "http://194.32.107.29/GaAPI"
+  );
+  const [tableData, setTableData] = useState();
+  console.log(carsData);
+  console.log(personsData);
 
-  const [dataTable, setDataTable] = useState();
-  const [dataTableCars, setDataTableCars] = useState();
-  const [dataTablePersons, setDataTablePersons] = useState();
-  console.log(data);
   useEffect(() => {
-    setDataTable([data]);
-    setDataTableCars(dataTable.cars);
-    setDataTablePersons(dataTable.persons);
-  }, [data]);
+    setTableData(carsData);
+  }, [carsData]);
+
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
-  console.log(dataTable);
   const column = [
-    { heading: "Id", value: `${dataTableCars.id}` },
-    { heading: "Bilmerke", value: `${dataTableCars.make}` },
-    { heading: "Model", value: `${dataTableCars.model}` },
-    { heading: "Årsmodell", value: `${dataTableCars.year}` },
-    { heading: "FirstName", value: `${dataTablePersons.firstName}` },
-    { heading: "LastName", value: `${dataTablePersons.lastName}` },
-    { heading: "Age", value: `${dataTablePersons.age}` },
+    { heading: "Id", value: 'dataCars.id' },
+    { heading: "Bilmerke", value: 'dataCars.make' },
+    { heading: "Model", value: 'dataCars.model' },
+    { heading: "Årsmodell", value: 'dataCars.year' },
+    { heading: "FirstName", value: 'dataPersons.firstName' },
+    { heading: "LastName", value: 'dataPersons.lastName' },
+    { heading: "Age", value: 'dataPersons.age' },
     { heading: "Action", value: "" }
   ];
 
@@ -39,7 +38,7 @@ const Home = () => {
       </header>
       <main className={styles["main-wrapper"]}>
         <h1>Home Page</h1>
-        <Table data={dataTableCars} column={column} />
+        <Table data={tableData} column={column} />
         {/* <div className={styles.cars}>
           <h3>Cars</h3>
           <Car />
