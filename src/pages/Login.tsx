@@ -96,7 +96,7 @@ const Login = () => {
               required
             />
             <Link to="/home">
-            <button>Login</button>
+            <button className={styles["login-btn"]}>Login</button>
             </Link>
           </form>
         </section>
