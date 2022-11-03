@@ -21,7 +21,10 @@ const Dropdown = ({ changeCarId }) => {
         <option value="">Choose a Car</option>
         {data.cars &&
           data.cars.map((index, value) => (
-            <option value={index.id} key={index.id}>
+            <option
+              value={[index.make, index.model, index.year]}
+              key={index.id}
+            >
               {index.id}
               {index.make} {index.model}
             </option>
