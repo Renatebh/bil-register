@@ -12,10 +12,6 @@ const Person = () => {
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
-  console.log(carsData);
-  // const carName = carsData.filter((car) => {
-  //   return car.id == index.carsOwned ? car.make : car.id;
-  // });
   return (
     <>
       <div className={styles["person-wrapper"]}>
