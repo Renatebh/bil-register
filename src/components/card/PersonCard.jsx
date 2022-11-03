@@ -12,7 +12,7 @@ const Card = (props) => {
   };
 
   const updatePerson = (id) => {
-    navigate(`/updateData/${id}`);
+    navigate(`/updatePersonData/${id}`);
   };
 
   const getUpdatedData = () => {

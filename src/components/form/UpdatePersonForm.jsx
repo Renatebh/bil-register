@@ -3,15 +3,28 @@ import styles from "./form.module.css";
 import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
+import Dropdown from "../dropdown/Dropdown";
 
 const Form = () => {
   const { personID } = useParams();
-  const { data } = useFetch(`http://194.32.107.29/GaAPI/car/${personID}`);
+  const { data } = useFetch(`http://194.32.107.29/GaAPI/person/${personID}`);
   const [updatePerson, setUpdatePerson] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
   const [carsOwned, setCarsOwned] = useState("");
+
+  const [carId, setCarId] = useState({ carsOwned: "" });
+  //   const [postData, setPostData] = useState({});
+  //   const joinedData = { ...values, ...carId };
+
+  //   useEffect(() => {
+  //     setPostData(joinedData);
+  //   }, [carId]);
+
+  const changeCarId = (carId) => {
+    setCarId({ carsOwned: carId });
+  };
 
   useEffect(() => {
     setUpdatePerson(data);
@@ -21,8 +34,8 @@ const Form = () => {
     setCarsOwned(data.carsOwned);
   }, [data]);
 
-  const updateData = () => {
-    axios.put(`http://194.32.107.29/GaAPI/car/${personID}`, {
+  const updatePersonData = () => {
+    axios.put(`http://194.32.107.29/GaAPI/person/${personID}`, {
       firstName: firstName,
       lastName: lastName,
       age: age,
@@ -41,34 +54,29 @@ const Form = () => {
             type="text"
             name="firstName"
             placeholder={updatePerson.firstName}
-            onChange={(e) => setMake(e.target.value)}
+            onChange={(e) => setFirstName(e.target.value)}
           />
           <label htmlFor="">Etternavn</label>
           <input
             type="text"
             name="lastName"
             placeholder={updatePerson.lastName}
-            onChange={(e) => setModel(e.target.value)}
+            onChange={(e) => setLastName(e.target.value)}
           />
           <label htmlFor="">Alder</label>
           <input
             type="number"
             name="age"
             placeholder={updatePerson.age}
-            onChange={(e) => setYear(e.target.valueAsNumber)}
+            onChange={(e) => setAge(e.target.valueAsNumber)}
           />
-          <label htmlFor="">carsOwned</label>
-          <input
-            type="text"
-            name="carsOwned"
-            placeholder={updatePerson.carsOwned}
-            onChange={(e) => setMake(e.target.value)}
-          />
+          <label htmlFor="">Velg bil</label>
+          <Dropdown changeCarId={changeCarId} />
           <input
             type="submit"
             value="Oppdater"
             className={styles["form-btn"]}
-            onClick={updateData}
+            onClick={updatePersonData}
           />
         </fieldset>
       </form>
