@@ -40,21 +40,23 @@ const Card = (props) => {
             <li>Årsmodell: {props.year}</li>
           </div>
         </ul>
-        <button
-          onClick={() => {
-            deleteCar(props.id);
-            getUpdatedData(props.id);
-          }}
-        >
-          Delete
-        </button>
-        <button
-          onClick={() => {
-            updateCar(props.id);
-          }}
-        >
-          Update
-        </button>
+        <div className={styles["button-container"]}>
+          <button
+            onClick={() => {
+              deleteCar(props.id);
+              getUpdatedData(props.id);
+            }}
+          >
+            Delete
+          </button>
+          <button
+            onClick={() => {
+              updateCar(props.id);
+            }}
+          >
+            Update
+          </button>
+        </div>
       </div>
     </>
   );
