@@ -20,16 +20,18 @@ const Card = (props) => {
   };
 
   return (
-    <div className={styles.card}>
-      <img src={picture} alt="Dawood" className={styles["person-image"]} />
-      <ul>
+    <div className={styles["persons-card"]}>
+      <div className={styles["image-container"]}>
+        <img src={picture} alt="Dawood" />
+      </div>
+      <ul className={styles["person-info"]}>
         <li>Id: {props.id}</li>
         <li>FirstName: {props.firstName}</li>
         <li>LastName: {props.lastName}</li>
         <li>Age: {props.age}</li>
         <li>carsOwned: {props.carsOwned}</li>
       </ul>
-      <div className={styles["button-container"]}>
+      <div className={styles["button-container-persons"]}>
         <button
           onClick={() => {
             deletePerson(props.id);

@@ -2,20 +2,34 @@
 
 .card {
   border: 1px solid black;
-  width: 320px;
+  width: 280px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0;
-  margin: 0;
-  font-size: var(--step--2);
+}
+
+.persons-card {
+  border: 1px solid black;
+  width: 230px;
+  height: 342px;
+}
+
+h3 {
+  margin-bottom: 2rem;
+  
 }
 
 .card li {
   list-style: none;
   padding: 10px 0px;
+}
+
+.persons-card li {
+  list-style: none;
+  padding: 2px 0px;
 }
 
 .card-info-container {
@@ -24,18 +38,9 @@
   gap: 1rem;
 }
 
-.car-image {
-  width: 100%;
-}
-
-.person-image {
-  width: 100%;
-}
-
 .card-info-container div {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem 1rem;
   margin-top: 1rem;
 }
 
@@ -43,8 +48,13 @@
   margin-top: 1rem;
 }
 
+.person-info {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
 .button-container {
-  margin-top: 1rem;
+  margin-top: 10px;
   margin-bottom: 1rem;
   width: 100%;
   display: flex;
@@ -67,17 +77,17 @@
   background-color: var(--secondaryColor);
 }
 
-/* .button-container-personCard {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+.button-container-persons {
+  margin-top: 10px;
   margin-bottom: 1rem;
-  width: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.button-container-personCard button {
+.button-container-persons button {
   background-color: var(--primaryColor);
-  padding: 8px 28px;
+  padding: 8px 20px;
   border: none;
   border-radius: 5px;
   color: var(--white);
@@ -85,9 +95,18 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  width: 100%;
 }
 
-.button-container-personCard button:hover {
+.button-container-persons button:hover {
   background-color: var(--secondaryColor);
-} */
+}
+
+.image-container {
+  height: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
