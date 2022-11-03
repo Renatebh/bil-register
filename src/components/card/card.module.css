@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.person-image {
+  width: 100%;
+}
+
 .card-info-container div {
   display: flex;
   flex-direction: column;
