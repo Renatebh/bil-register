@@ -1,11 +1,16 @@
 fieldset {
   width: 400px;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
-  background-color: rgb(200, 200, 200);
+  background-color: var(--blackTransparent);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: none;
+}
+
+.form-header {
+  color: var(--white);
 }
 
 .form-div {
@@ -18,7 +23,7 @@ fieldset {
   padding: 10px;
   margin: 10px 0;
   cursor: text;
-  color: grey;
+  color: var(--greyColor);
 }
 
 .form-btn {
@@ -26,7 +31,8 @@ fieldset {
   border-radius: 10px;
   padding: 10px;
   margin: 10px 0;
-  background-color: rgb(86, 176, 255);
+  background-color: var(--secondaryColor);
+  border: none;
 }
 
 span {

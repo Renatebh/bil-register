@@ -57,9 +57,9 @@ input[type="password"],
 textarea,
 .login-btn {
   font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  /* font-size: 22px; */
+  /* padding: 0.25rem; */
+  /* border-radius: 0.5rem; */
 }
 
 label,

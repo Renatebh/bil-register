@@ -27,7 +27,7 @@ const Form = () => {
     <div>
       <form>
         <fieldset>
-          <h3>Legg til bil</h3>
+          <h3 className={styles["form-header"]}>Legg til bil</h3>
           {inputs.map((input) => {
             return (
               <FormInput
