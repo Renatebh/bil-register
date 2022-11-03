@@ -1,23 +1,42 @@
 @import "../varibles/variables.module.css";
 
-.App {
+.login-background {
+  background-color: var(--primaryColor);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bilregister-logo {
+  width: 400px;
+}
+
+.img-container {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem 0.5rem;
-}
+} */
 
 section {
   width: 100%;
-  max-width: 420px;
+  width: 400px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem;
-  background-color: rgba(19, 221, 147, 0.4);
+  background-color: var(--secondaryColor);
 }
 
 form {
@@ -50,4 +69,15 @@ button {
 
 button {
   padding: 0.5rem;
+  background-color: var(--primaryColor);
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
 }
