@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <>
       <p className={styles.logo}>
-        <Link to="./home">
+        <Link to="/home">
           <img
             src={bilregisterLogo}
             alt="Bilregister logo"
