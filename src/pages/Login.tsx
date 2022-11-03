@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import bilregisterLogo from "../components/logo/bilregister_logo.png";
 import { Link } from "react-router-dom";
 // import Logo from "../components/logo/Logo";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const userRef = useRef<HTMLInputElement>(null);
@@ -13,12 +14,6 @@ const Login = () => {
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
-
-  // useEffect(() => {
-  //   if (userRef.current != null) {
-  //     userRef.current.focus();
-  //   }
-  // }, []);
 
   useEffect(() => {
     setErrMsg("");
@@ -49,9 +44,6 @@ const Login = () => {
         setErrMsg("Feil passord");
       }
     }
-    // else {
-    //   setErrMsg("");
-    // }
   };
 
   return (
@@ -64,8 +56,9 @@ const Login = () => {
         />
       </div>
       {success ? (
-        <Home />
+        <Navigate replace to="/home" />
       ) : (
+        // <Home />
         <section>
           <p
             ref={errRef}
@@ -95,9 +88,9 @@ const Login = () => {
               value={pwd}
               required
             />
-            <Link to="/home">
+            {/* <Link to="/home"> */}
             <button className={styles["login-btn"]}>Login</button>
-            </Link>
+            {/* </Link> */}
           </form>
         </section>
       )}
