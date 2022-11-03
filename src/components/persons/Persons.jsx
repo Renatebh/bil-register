@@ -1,30 +1,31 @@
 import useFetch from "../../hooks/useFetch";
 import PersonCard from "../card/PersonCard";
 import styles from "./person.module.css";
-import axios from "axios";
-import { useState } from "react";
 
 const Person = () => {
-  const { personsData, loading, error } = useFetch(
+  const { personsData, carsData, loading, error } = useFetch(
     "http://194.32.107.29/GaAPI"
   );
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
+  console.log(carsData);
+  console.log(personsData);
   return (
     <>
       <div className={styles["person-wrapper"]}>
         {personsData &&
-          personsData.map((index, value) => {
+          carsData &&
+          personsData.map((value, index) => {
             return (
               <PersonCard
-                key={value}
-                id={index.id}
-                firstName={index.firstName}
-                lastName={index.lastName}
-                age={index.age}
-                carsOwned={index.carsOwned}
+                key={index}
+                id={value.id}
+                firstName={value.firstName}
+                lastName={value.lastName}
+                age={value.age}
+                carsOwned={value.carsOwned}
               />
             );
           })}

@@ -12,7 +12,7 @@ const Form = () => {
     age: ""
   });
 
-  const [carId, setCarId] = useState({ carsOwned: 0 });
+  const [carId, setCarId] = useState({ carsOwned: "" });
   const [postData, setPostData] = useState({});
   const joinedData = { ...values, ...carId };
 
