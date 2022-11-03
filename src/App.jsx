@@ -8,6 +8,7 @@ import AddCar from "./pages/AddCar";
 import Persons from "./pages/AllPersons";
 import AddPerson from "./pages/AddPerson";
 import UpdateData from "./pages/UpdateData";
+import UpdatePersonData from "./pages/UpdatePersonData";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
       <Route path="/addPerson" element={<AddPerson />} />
       <Route path="/addCar" element={<AddCar />} />
       <Route path="/updateData/:carID" element={<UpdateData />} />
+      <Route
+        path="/updatePersonData/:personID"
+        element={<UpdatePersonData />}
+      />
     </Routes>
   );
 }
