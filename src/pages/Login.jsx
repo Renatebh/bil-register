@@ -1,13 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./login.module.css";
-import Home from "./Home.jsx";
 import bilregisterLogo from "../components/logo/bilregister_logo.png";
-import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
-  const userRef = useRef<HTMLInputElement>(null);
-  const errRef = useRef<any>();
+  const userRef = useRef();
+  const errRef = useRef();
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
@@ -18,7 +16,7 @@ const Login = () => {
     setErrMsg("");
   }, [user, pwd]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (user === "admin" && pwd === "admin") {
