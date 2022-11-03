@@ -9,9 +9,9 @@ const AddCar = () => {
     <>
       <header>
         <Navbar />
+        <BigButtonsBox />
       </header>
       <main className={styles["main-wrapper"]}>
-        <BigButtonsBox />
         <AddCarForm />
         <CarList />
       </main>

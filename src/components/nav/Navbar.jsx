@@ -15,11 +15,6 @@ const Navbar = () => {
             Hjem
           </Link>
         </li>
-        <li>
-          <Link to="/addData" className={style["link-item"]}>
-            Legg til data
-          </Link>
-        </li>
       </ul>
     </nav>
   );
