@@ -14,9 +14,10 @@ const Form = () => {
 
   const [carId, setCarId] = useState({ carsOwned: 0 });
   const [postData, setPostData] = useState({});
+  const joinedData = { ...values, ...carId };
+
   useEffect(() => {
-    setPostData(jointData);
-    console.log(carId);
+    setPostData(joinedData);
   }, [carId]);
 
   const changeCarId = (carId) => {
@@ -26,7 +27,6 @@ const Form = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const jointData = { ...values, ...carId };
 
   const sendData = () => {
     axios.post("http://194.32.107.29/GaAPI/person", {
@@ -35,11 +35,6 @@ const Form = () => {
 
     alert("Ny person er registrert!");
   };
-
-  const getCars = () => {
-    axios.get("http://194.32.107.29/GaAPI");
-  };
-  console.log(getCars);
 
   return (
     <div>

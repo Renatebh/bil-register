@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const Person = () => {
-  const { data, carsData, loading, error } = useFetch(
+  const { personsData, loading, error } = useFetch(
     "http://194.32.107.29/GaAPI"
   );
 
@@ -15,8 +15,8 @@ const Person = () => {
   return (
     <>
       <div className={styles["person-wrapper"]}>
-        {data.persons &&
-          data.persons.map((index, value) => {
+        {personsData &&
+          personsData.map((index, value) => {
             return (
               <PersonCard
                 key={value}
