@@ -1,5 +1,5 @@
 // import "./App.css";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -10,8 +10,8 @@ import AddPerson from "./pages/AddPerson";
 import UpdateData from "./pages/UpdateData";
 
 function App() {
-  const { carID } = useParams();
-  const params = useParams();
+  // const { carID } = useParams();
+  // const params = useParams();
 
   return (
     <Routes>

@@ -1,7 +1,7 @@
 import useFetch from "../../hooks/useFetch";
 import PersonCard from "../card/PersonCard";
 import styles from "./person.module.css";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const Person = () => {
   const { carsData, personsData, loading, error } = useFetch(
@@ -42,11 +42,7 @@ const Person = () => {
                 firstName={index.firstName}
                 lastName={index.lastName}
                 age={index.age}
-                carsOwned={carsArray.filter((car) => {
-                  if (index.carsOwned === carsData.id) {
-                    return carsData.make;
-                  }
-                })}
+                carsOwned={index.carsOwned}
               />
             );
           })}
@@ -56,3 +52,5 @@ const Person = () => {
 };
 
 export default Person;
+// carsData.filter((car) => {
+// return car.id == index.carsOwned ? car.make : car.id;

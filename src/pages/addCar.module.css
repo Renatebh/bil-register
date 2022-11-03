@@ -1,0 +1,15 @@
+.main-container {
+    display: flex;
+}
+
+.addCar-form-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.carCards-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
