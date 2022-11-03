@@ -1,42 +1,23 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./login.module.css";
-import Home from "./Home.jsx";
 import bilregisterLogo from "../components/logo/bilregister_logo.png";
-import { Link } from "react-router-dom";
-// import Logo from "../components/logo/Logo";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
-  const userRef = useRef<HTMLInputElement>(null);
-  const errRef = useRef<any>();
+  const userRef = useRef();
+  const errRef = useRef();
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-  // useEffect(() => {
-  //   if (userRef.current != null) {
-  //     userRef.current.focus();
-  //   }
-  // }, []);
-
   useEffect(() => {
     setErrMsg("");
   }, [user, pwd]);
 
-  //  const checkUserPwd = () => {
-  //  let user = "";
-  //  let pwd = ""; {
-  // //   if (user && pwd === "admin") {
-
-  // //  }
-  //  }
-
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(user, pwd);
-    // setUser("");
-    // setPwd("");
 
     if (user === "admin" && pwd === "admin") {
       setSuccess(true);
@@ -49,9 +30,6 @@ const Login = () => {
         setErrMsg("Feil passord");
       }
     }
-    // else {
-    //   setErrMsg("");
-    // }
   };
 
   return (
@@ -64,7 +42,7 @@ const Login = () => {
         />
       </div>
       {success ? (
-        <Home />
+        <Navigate replace to="/home" />
       ) : (
         <section>
           <p
@@ -95,9 +73,7 @@ const Login = () => {
               value={pwd}
               required
             />
-            <Link to="/home">
-            <button>Login</button>
-            </Link>
+            <button className={styles["login-btn"]}>Login</button>
           </form>
         </section>
       )}

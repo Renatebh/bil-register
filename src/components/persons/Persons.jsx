@@ -1,7 +1,6 @@
 import useFetch from "../../hooks/useFetch";
 import PersonCard from "../card/PersonCard";
 import styles from "./person.module.css";
-// import axios from "axios";
 
 const Person = () => {
   const { personsData, carsData, loading, error } = useFetch(
@@ -36,3 +35,5 @@ const Person = () => {
 };
 
 export default Person;
+// carsData.filter((car) => {
+// return car.id == index.carsOwned ? car.make : car.id;

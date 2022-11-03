@@ -1,8 +1,8 @@
-import { createContext } from "react";
 import axios from "axios";
 import styles from "./card.module.css";
+import picture from "../card/car.jpg";
 
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Card = (props) => {
   const navigate = useNavigate();
 
@@ -20,31 +20,45 @@ const Card = (props) => {
   };
 
   return (
-    <div className={styles.card}>
-      <ul>
-        <li>Id: {props.id}</li>
-        <li>Merke: {props.make}</li>
-        <li>Model: {props.model}</li>
-        <li>Årsmodell: {props.year}</li>
-      </ul>
-      <button
-        onClick={() => {
-          deleteCar(props.id);
-          getUpdatedData(props.id);
-        }}
-      >
-        Delete
-      </button>
-      {/* update car data */}
-      <button
-        onClick={() => {
-          updateCar(props.id);
-          // getUpdatedData();
-        }}
-      >
-        Update
-      </button>
-    </div>
+    <>
+      <div className={styles.card}>
+        <img
+          src={picture}
+          alt="A black Audi car"
+          className={styles["car-image"]}
+        />
+        <ul className={styles["card-info-container"]}>
+          <div className={styles["info-seperator"]}>
+            <li>Id: {props.id}</li>
+            <hr />
+            <li>Merke: {props.make}</li>
+          </div>
+          <hr className={styles["middle-line"]} />
+          <div className={styles["info-seperator"]}>
+            <li>Model: {props.model}</li>
+            <hr />
+            <li>Årsmodell: {props.year}</li>
+          </div>
+        </ul>
+        <div className={styles["button-container"]}>
+          <button
+            onClick={() => {
+              deleteCar(props.id);
+              getUpdatedData(props.id);
+            }}
+          >
+            Delete
+          </button>
+          <button
+            onClick={() => {
+              updateCar(props.id);
+            }}
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

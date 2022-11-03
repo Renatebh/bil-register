@@ -10,9 +10,6 @@ import AddPerson from "./pages/AddPerson";
 import UpdateData from "./pages/UpdateData";
 
 function App() {
-  // const { carID } = useParams();
-  const params = useParams();
-
   return (
     <Routes>
       <Route path="/" element={<Login />} />

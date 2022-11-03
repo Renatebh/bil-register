@@ -1,5 +1,4 @@
 import Navbar from "../components/nav/Navbar";
-
 import PersonsList from "../components/persons/Persons";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
 

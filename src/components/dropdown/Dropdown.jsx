@@ -15,6 +15,8 @@ const Dropdown = ({ changeCarId }) => {
   const handleChange = (e) => {
     setCarSelected(e.target.value);
   };
+  console.log([data]);
+
   return (
     <>
       <select onChange={handleChange}>

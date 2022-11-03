@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import axios from "axios";
 import styles from "./card.module.css";
+import picture from "../card/dawood.jpg";
 
 const Card = (props) => {
   const deletePerson = (id) => {
@@ -14,6 +15,7 @@ const Card = (props) => {
 
   return (
     <div className={styles.card}>
+      <img src={picture} alt="Dawood" className={styles["person-image"]} />
       <ul>
         <li>Id: {props.id}</li>
         <li>FirstName: {props.firstName}</li>
