@@ -3,7 +3,6 @@ import styles from "./login.module.css";
 import Home from "./Home.jsx";
 import bilregisterLogo from "../components/logo/bilregister_logo.png";
 import { Link } from "react-router-dom";
-// import Logo from "../components/logo/Logo";
 import { Navigate } from "react-router-dom";
 
 const Login = () => {
@@ -19,19 +18,8 @@ const Login = () => {
     setErrMsg("");
   }, [user, pwd]);
 
-  //  const checkUserPwd = () => {
-  //  let user = "";
-  //  let pwd = ""; {
-  // //   if (user && pwd === "admin") {
-
-  // //  }
-  //  }
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // console.log(user, pwd);
-    // setUser("");
-    // setPwd("");
 
     if (user === "admin" && pwd === "admin") {
       setSuccess(true);
@@ -58,7 +46,6 @@ const Login = () => {
       {success ? (
         <Navigate replace to="/home" />
       ) : (
-        // <Home />
         <section>
           <p
             ref={errRef}
@@ -88,9 +75,7 @@ const Login = () => {
               value={pwd}
               required
             />
-            {/* <Link to="/home"> */}
             <button className={styles["login-btn"]}>Login</button>
-            {/* </Link> */}
           </form>
         </section>
       )}
