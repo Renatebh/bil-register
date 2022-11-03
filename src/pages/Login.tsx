@@ -1,6 +1,9 @@
 import { useRef, useState, useEffect } from "react";
-// import styles from "./login.module.css";
+import styles from "./login.module.css";
 import Home from "./Home.jsx";
+import bilregisterLogo from "../components/logo/bilregister_logo.png";
+// import Logo from "../components/logo/Logo";
+
 const Login = () => {
   const userRef = useRef<HTMLInputElement>(null);
   const errRef = useRef<any>();
@@ -51,7 +54,14 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className={styles["login-background"]}>
+      <div className={styles["img-container"]}>
+        <img
+          src={bilregisterLogo}
+          alt="Bilregister logo"
+          className={styles["bilregister-logo"]}
+        />
+      </div>
       {success ? (
         <Home />
       ) : (
@@ -88,7 +98,7 @@ const Login = () => {
           </form>
         </section>
       )}
-    </>
+    </div>
   );
 };
 
