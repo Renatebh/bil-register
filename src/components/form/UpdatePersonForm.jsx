@@ -5,25 +5,28 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 
 const Form = () => {
-  const { carID } = useParams();
-  const { data } = useFetch(`http://194.32.107.29/GaAPI/car/${carID}`);
-  const [updateCar, setUpdateCar] = useState({});
-  const [make, setMake] = useState("");
-  const [model, setModel] = useState("");
-  const [year, setYear] = useState("");
+  const { personID } = useParams();
+  const { data } = useFetch(`http://194.32.107.29/GaAPI/car/${personID}`);
+  const [updatePerson, setUpdatePerson] = useState({});
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [age, setAge] = useState("");
+  const [carsOwned, setCarsOwned] = useState("");
 
   useEffect(() => {
-    setUpdateCar(data);
-    setMake(data.make);
-    setModel(data.model);
-    setYear(data.year);
+    setUpdatePerson(data);
+    setFirstName(data.firstName);
+    setLastName(data.lastName);
+    setAge(data.age);
+    setCarsOwned(data.carsOwned);
   }, [data]);
 
   const updateData = () => {
-    axios.put(`http://194.32.107.29/GaAPI/car/${carID}`, {
-      make: make,
-      model: model,
-      year: year
+    axios.put(`http://194.32.107.29/GaAPI/car/${personID}`, {
+      firstName: firstName,
+      lastName: lastName,
+      age: age,
+      carsOwned: carsOwned
     });
     alert("Data updated");
   };
@@ -32,26 +35,34 @@ const Form = () => {
     <div>
       <form>
         <fieldset>
-          <h3>Oppdater bil</h3>
+          <h3>Oppdater person</h3>
+          <label htmlFor="">Fornavn</label>
           <input
             type="text"
-            name="make"
-            placeholder={updateCar.make}
+            name="firstName"
+            placeholder={updatePerson.firstName}
             onChange={(e) => setMake(e.target.value)}
           />
-          <label htmlFor="">Model</label>
+          <label htmlFor="">Etternavn</label>
           <input
             type="text"
-            name="model"
-            placeholder={updateCar.model}
+            name="lastName"
+            placeholder={updatePerson.lastName}
             onChange={(e) => setModel(e.target.value)}
           />
-          <label htmlFor="">Year</label>
+          <label htmlFor="">Alder</label>
           <input
             type="number"
-            name="year"
-            placeholder={updateCar.year}
+            name="age"
+            placeholder={updatePerson.age}
             onChange={(e) => setYear(e.target.valueAsNumber)}
+          />
+          <label htmlFor="">carsOwned</label>
+          <input
+            type="text"
+            name="carsOwned"
+            placeholder={updatePerson.carsOwned}
+            onChange={(e) => setMake(e.target.value)}
           />
           <input
             type="submit"

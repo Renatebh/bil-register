@@ -1,8 +1,8 @@
 import axios from "axios";
 import styles from "./card.module.css";
 import picture from "../card/car.jpg";
-
 import { useNavigate } from "react-router-dom";
+
 const Card = (props) => {
   const navigate = useNavigate();
 
@@ -28,13 +28,13 @@ const Card = (props) => {
           className={styles["car-image"]}
         />
         <ul className={styles["card-info-container"]}>
-          <div>
+          <div className={styles["info-seperator"]}>
             <li>Id: {props.id}</li>
             <hr />
             <li>Merke: {props.make}</li>
           </div>
           <hr className={styles["middle-line"]} />
-          <div>
+          <div className={styles["info-seperator"]}>
             <li>Model: {props.model}</li>
             <hr />
             <li>Årsmodell: {props.year}</li>
