@@ -15,14 +15,25 @@ const Dropdown = ({ changeCarId }) => {
   const handleChange = (e) => {
     setCarSelected(e.target.value);
   };
+  console.log([data]);
+  // const carsAvailable = data.cars.map((car) => {
+  //   return car.id !== data.persons.carsOwned;
+  // });
+  // console.log("carsAvailable", carsAvailable);
   return (
     <>
       <select onChange={handleChange}>
         <option value="">Choose a Car</option>
-        {data.cars &&
-          data.cars.map((index, value) => (
+        {/* {carsAvailable &&
+          carsAvailable.map((index, value) => (
             <option value={index.id} key={index.id}>
               {index.id}
+              {index.make} {index.model}
+            </option>
+          ))} */}
+        {data.cars &&
+          data.cars.map((index, value) => (
+            <option value={index.name} key={index.id}>
               {index.make} {index.model}
             </option>
           ))}
