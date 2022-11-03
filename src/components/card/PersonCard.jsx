@@ -19,7 +19,7 @@ const Card = (props) => {
         <li>FirstName: {props.firstName}</li>
         <li>LastName: {props.lastName}</li>
         <li>Age: {props.age}</li>
-        <li>carsOwned: {props.carsOwned}</li>
+        <li>carsOwned: {props.make}</li>
       </ul>
       <button
         onClick={() => {

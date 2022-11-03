@@ -4,11 +4,10 @@ import Dropdown from "../dropdown/Dropdown";
 import inputsPersons from "./InputsPersons";
 import styles from "./form.module.css";
 import axios from "axios";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 
 const Form = () => {
-  const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
-  
+  // const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
 
   const [values, setValues] = useState({
     firstName: "",
@@ -18,6 +17,7 @@ const Form = () => {
 
   const [carId, setCarId] = useState({ carsOwned: "" });
   const [postData, setPostData] = useState({});
+
   useEffect(() => {
     setPostData(jointData);
   }, [carId]);
@@ -38,9 +38,6 @@ const Form = () => {
 
     alert("Ny person er registrert!");
   };
-
-
-  
 
   return (
     <div>

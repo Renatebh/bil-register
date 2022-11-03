@@ -20,7 +20,7 @@ const Dropdown = ({ changeCarId }) => {
       <select onChange={handleChange}>
         <option value="">Choose a Car</option>
         {data.cars &&
-          data.cars.map((index, value) => (
+          data.cars.map((index) => (
             <option value={index.id} key={index.id}>
               {index.id}
               {index.make} {index.model}

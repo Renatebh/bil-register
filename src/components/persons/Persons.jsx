@@ -1,32 +1,40 @@
 import useFetch from "../../hooks/useFetch";
 import PersonCard from "../card/PersonCard";
 import styles from "./person.module.css";
-import axios from "axios";
+import { useState, useEffect } from "react";
 
 const Person = () => {
-  const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
+  const { carsData, personsData, loading, error } = useFetch(
+    "http://194.32.107.29/GaAPI"
+  );
+  // const [userId, setUserId] = useState(null);
+  // const [personData, setPersonData] = useState({});
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
-  // const getCars = () => {
-  //   axios.get("http://194.32.107.29/GaAPI");
-  // };
-  // console.log(getCars);
-  const carNames = () => {
-    data.cars.map((car) => {
-      const names = car.make;
-      const models = car.model;
-      const ids = car.id;
-      console.log(names + models + ids);
-    });
-  };
-  carNames();
+  let carsArray = [];
+  carsArray.push(carsData);
+  // carsData.filter((car) => {
+  //   return filterCarId.push(car.id);
+  // });
+
+  // data.cars.filter((car) => car.id === id, {});
+
+  // useEffect(() => {
+  //   if (personsData) {
+  //     const { persons } = personsData;
+  //     const [person] = persons.filter((person) => person.id === userId);
+  //     setPersonData(person);
+  //   }
+  // }, [personData]);
+
   return (
     <>
       <div className={styles["person-wrapper"]}>
-        {data.persons &&
-          data.persons.map((index, value) => {
+        {personsData &&
+          carsData &&
+          personsData.map((value, index) => {
             return (
               <PersonCard
                 key={value}
@@ -34,7 +42,11 @@ const Person = () => {
                 firstName={index.firstName}
                 lastName={index.lastName}
                 age={index.age}
-                carsOwned={index.carsOwned}
+                carsOwned={carsArray.filter((car) => {
+                  if (index.carsOwned === carsData.id) {
+                    return carsData.make;
+                  }
+                })}
               />
             );
           })}

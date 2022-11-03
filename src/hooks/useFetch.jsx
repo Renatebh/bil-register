@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 
 const useFetch = (url) => {
   const [data, setData] = useState([]);
+  const [carsData, setCarsData] = useState([]);
+  const [personsData, setPersonsData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -12,6 +14,8 @@ const useFetch = (url) => {
       .get(url)
       .then((response) => {
         setData(response.data);
+        setCarsData(response.data.cars);
+        setPersonsData(response.data.persons);
       })
       .catch((err) => {
         setError(err);
@@ -21,7 +25,7 @@ const useFetch = (url) => {
       });
   }, [url]);
 
-  return { data, loading, error };
+  return { data, carsData, personsData, loading, error };
 };
 
 export default useFetch;
