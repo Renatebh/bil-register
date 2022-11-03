@@ -1,8 +1,7 @@
-import { createContext } from "react";
 import axios from "axios";
 import styles from "./card.module.css";
 
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Card = (props) => {
   const navigate = useNavigate();
 
@@ -35,11 +34,9 @@ const Card = (props) => {
       >
         Delete
       </button>
-      {/* update car data */}
       <button
         onClick={() => {
           updateCar(props.id);
-          // getUpdatedData();
         }}
       >
         Update
