@@ -34,7 +34,7 @@ const Person = () => {
       <div className={styles["person-wrapper"]}>
         {personsData &&
           carsData &&
-          personsData.map((value, index) => {
+          personsData.map((index, value) => {
             return (
               <PersonCard
                 key={value}

@@ -8,7 +8,7 @@ const Dropdown = ({ changeCarId }) => {
 
   useEffect(() => {
     changeCarId(carSelected);
-  }, [changeCarId, carSelected]);
+  }, [carSelected]);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
@@ -23,14 +23,6 @@ const Dropdown = ({ changeCarId }) => {
       <select onChange={handleChange}>
         <option value="">Choose a Car</option>
 
-        {/* {carsAvailable &&
-          carsAvailable.map((index, value) => (
-
-            <option value={index.id} key={index.id}>
-              {index.id}
-              {index.make} {index.model}
-            </option>
-          ))} */}
         {data.cars &&
           data.cars.map((index, value) => (
             <option value={index.name} key={index.id}>
