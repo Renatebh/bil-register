@@ -1,8 +1,8 @@
 import axios from "axios";
 import styles from "./card.module.css";
 import picture from "../card/car.jpg";
-
 import { useNavigate } from "react-router-dom";
+
 const Card = (props) => {
   const navigate = useNavigate();
 
