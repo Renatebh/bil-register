@@ -10,8 +10,8 @@ const Person = () => {
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
-  console.log(carsData);
-  console.log(personsData);
+  // console.log(carsData);
+  // console.log(personsData);
   return (
     <>
       <div className={styles["person-wrapper"]}>

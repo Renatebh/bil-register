@@ -9,18 +9,17 @@ const Form = () => {
   const { personID } = useParams();
   const { data } = useFetch(`http://194.32.107.29/GaAPI/person/${personID}`);
   const [updatePerson, setUpdatePerson] = useState({});
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState("");
-  const [carsOwned, setCarsOwned] = useState("");
+  const [firstName, setFirstName] = useState({ firstName: "" });
+  const [lastName, setLastName] = useState({ lastName: "" });
+  const [age, setAge] = useState({ age: "" });
 
   const [carId, setCarId] = useState({ carsOwned: "" });
-  //   const [postData, setPostData] = useState({});
-  //   const joinedData = { ...values, ...carId };
+  const [postData, setPostData] = useState({});
+  const joinedData = { ...firstName, ...lastName, ...age, ...carId };
 
-  //   useEffect(() => {
-  //     setPostData(joinedData);
-  //   }, [carId]);
+  useEffect(() => {
+    setPostData(joinedData);
+  }, [carId]);
 
   const changeCarId = (carId) => {
     setCarId({ carsOwned: carId });
@@ -31,7 +30,6 @@ const Form = () => {
     setFirstName(data.firstName);
     setLastName(data.lastName);
     setAge(data.age);
-    setCarsOwned(data.carsOwned);
   }, [data]);
 
   const updatePersonData = () => {
@@ -39,7 +37,7 @@ const Form = () => {
       firstName: firstName,
       lastName: lastName,
       age: age,
-      carsOwned: carsOwned
+      ...postData
     });
     alert("Data updated");
   };
