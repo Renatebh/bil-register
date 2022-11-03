@@ -94,9 +94,8 @@ const Login = () => {
               value={pwd}
               required
             />
-        
+
             <button>Login</button>
-          
           </form>
         </section>
       )}
