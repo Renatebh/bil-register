@@ -15,11 +15,12 @@ const Form = () => {
     age: ""
   });
 
-  const [carId, setCarId] = useState({ carsOwned: "" });
+  const [carId, setCarId] = useState({ carsOwned: 0 });
   const [postData, setPostData] = useState({});
 
   useEffect(() => {
     setPostData(jointData);
+    console.log(carId);
   }, [carId]);
 
   const changeCarId = (carId) => {
