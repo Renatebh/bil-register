@@ -2,7 +2,7 @@
 
 .card {
   border: 1px solid black;
-  width: 300px;
+  width: 270px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -17,25 +17,24 @@
   list-style: none;
 }
 
-.card-info-container {
-  gap: 1rem;
-}
-
-.car-image {
+.car-image img {
   width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
-.card-info-container div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem 1rem;
-  margin-top: 1rem;
+table {
+  border-collapse: collapse;
+  max-width: 900px;
   width: 100%;
 }
 
-.middle-line {
-  margin-top: 1rem;
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 50%;
+  text-align: left;
 }
 
 .button-container {
@@ -50,6 +49,12 @@
   color: var(--white);
   border: none;
   border-radius: 5px;
-  padding: 10px 27px;
+  padding: 8px 27px;
   background-color: var(--primaryColor);
+  text-transform: uppercase;
+}
+
+.button-container button:hover {
+  background-color: var(--secondaryColor);
+  cursor: pointer;
 }

@@ -29,30 +29,22 @@ const Card = (props) => {
           className={styles["car-image"]}
         />
         <table className={styles["card-info-container"]}>
-          <thead>
             <tr>
-              <th>ID</th>
-              <th>Merke</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
+              <th>ID:</th>
               <td>{props.id}</td>
+            </tr>
+            <tr>
+              <th>Merke:</th>
               <td>{props.make}</td>
             </tr>
-          </tbody>
-          <thead>
             <tr>
-              <th>Model</th>
-              <th>Årsmodell</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
+              <th>Model:</th>
               <td>{props.model}</td>
+            </tr>
+            <tr>
+              <th>Årsmodell:</th>
               <td>{props.year}</td>
             </tr>
-          </tbody>
         </table>
         <div className={styles["button-container"]}>
           <button
