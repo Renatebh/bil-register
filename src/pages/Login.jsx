@@ -22,10 +22,10 @@ const Login = () => {
     if (user === "admin" && pwd === "admin") {
       setSuccess(true);
     } else if (user !== "admin" && pwd !== "admin") {
-      setErrMsg("Feil username og passord");
+      setErrMsg("Feil brukernavn og passord");
     } else if (user || pwd !== "admin") {
       if (user !== "admin") {
-        setErrMsg("Feil username");
+        setErrMsg("Feil brukernavn");
       } else if (pwd !== "admin") {
         setErrMsg("Feil passord");
       }

@@ -1,4 +1,4 @@
-import CarList from "../components/cars/Car";
+import Car from "../components/cars/Car";
 import Navbar from "../components/nav/Navbar";
 import SideBar from "../components/sidebar/SideBar";
 import styles from "./allCarsAndPersons.module.css";
@@ -12,7 +12,7 @@ const Cars = () => {
       <main className={styles["main-container"]}>
         <SideBar />
         <div className={styles["allCars-container"]}>
-          <CarList />
+          <Car />
         </div>
       </main>
     </>

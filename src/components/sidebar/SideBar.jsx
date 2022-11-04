@@ -1,6 +1,6 @@
 import { FaHome, FaUser, FaCar, FaUserPlus } from "react-icons/fa";
 import { AiFillFolderAdd } from "react-icons/ai";
-import { MdAdminPanelSettings } from "react-icons/md";
+import { BiLogOut } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import style from "./sidebar.module.css";
 
@@ -57,8 +57,8 @@ const SideBar = () => {
           <li className={style["sidebar-item"]}>
             <Link to="/" className={style["sidebar-link"]}>
               <p className={style["sidebar-text"]}>
-                <MdAdminPanelSettings size={30} />
-                Admin
+                <BiLogOut size={30} />
+                Logg ut
               </p>
             </Link>
           </li>

@@ -20,7 +20,6 @@ const Form = () => {
       ...values
     });
     alert("Ny bil er lagt til!");
-    console.log("Car added");
   };
 
   return (

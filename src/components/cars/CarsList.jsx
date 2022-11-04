@@ -1,4 +1,3 @@
-import React from "react";
 import useFetch from "../../hooks/useFetch";
 import styles from "./car.module.css";
 import image from "../../components/card/car.jpg";
@@ -23,7 +22,7 @@ const CarsList = () => {
         </ul>
         <div className={styles["list-wrapper"]}>
           {data.cars &&
-            data.cars.map((car, index) => {
+            data.cars.map((car) => {
               return (
                 <ul key={car.id} className={styles["car-list"]}>
                   <li>

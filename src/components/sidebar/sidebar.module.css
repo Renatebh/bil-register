@@ -35,10 +35,6 @@
   color: var(--lightGreyColor);
 }
 
-.sidebar-icon {
-  color: var(--lightGreyColor);
-}
-
 .sidebar-text:hover {
   color: var(--secondaryColor);
 }

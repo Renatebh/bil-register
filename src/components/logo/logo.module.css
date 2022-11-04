@@ -1,15 +1,3 @@
-@import "../../varibles/variables.module.css";
-
-/* .logo {
-  margin-left: 1rem;
-  font-weight: bold;
-  font-family: var(--header-font);
-}
-
-.logo a {
-  color: var(--white);
-} */
-
 .bilregister-logo {
   width: 250px;
   margin: 20px;

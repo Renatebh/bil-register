@@ -1,4 +1,3 @@
-import React from "react";
 import useFetch from "../../hooks/useFetch";
 import styles from "./person.module.css";
 import image from "../../image/dawood.jpg";
@@ -23,7 +22,7 @@ const PersonsList = () => {
         </ul>
         <div className={styles["list-wrapper"]}>
           {data.persons &&
-            data.persons.map((person, index) => {
+            data.persons.map((person) => {
               return (
                 <ul key={person.id} className={styles["person-list"]}>
                   <li>
@@ -38,10 +37,10 @@ const PersonsList = () => {
                   <li className={styles["person-item"]}>{person.lastName}</li>
                   <li className={styles["person-item"]}>
                     {data.cars &&
-                      data.cars.map((car, index) => {
-                        if (index.id === parseInt(person.carsOwned)) {
+                      data.cars.map((car) => {
+                        if (car.id === parseInt(person.carsOwned)) {
                           return (
-                            <div key={index}>
+                            <div key={car.id}>
                               <p className={styles["cars-owned"]}>{car.make}</p>
                               <p>{car.model}</p>
                             </div>

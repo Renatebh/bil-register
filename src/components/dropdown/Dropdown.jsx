@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
 import styles from "../form/form.module.css";
@@ -7,6 +7,7 @@ const Dropdown = ({ changeCarId }) => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
   const [carSelected, setCarSelected] = useState([]);
 
+  // Når vi legger inn changeCarId så får vi infinite loop
   useEffect(() => {
     changeCarId(carSelected);
   }, [carSelected]);
@@ -17,17 +18,16 @@ const Dropdown = ({ changeCarId }) => {
   const handleChange = (e) => {
     setCarSelected(e.target.value);
   };
-  // console.log([data]);
 
   return (
     <>
       <select className={styles.dropdown} onChange={handleChange}>
         <option value="">Choose a Car</option>
         {data.cars &&
-          data.cars.map((index, value) => (
-            <option value={[index.id]} key={index.id}>
-              {index.id}
-              {index.make} {index.model}
+          data.cars.map((car) => (
+            <option value={[car.id]} key={car.id}>
+              {car.id}
+              {car.make} {car.model}
             </option>
           ))}
       </select>
