@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./form.module.css";
 import axios from "axios";
 import useFetch from "../../hooks/useFetch";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
 
 const Form = () => {
@@ -16,6 +16,7 @@ const Form = () => {
   const [carId, setCarId] = useState({ carsOwned: "" });
   const [postData, setPostData] = useState({});
   const joinedData = { ...firstName, ...lastName, ...age, ...carId };
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPostData(joinedData);
@@ -40,6 +41,11 @@ const Form = () => {
       ...postData
     });
     alert("Data updated");
+    navigateToPerson();
+  };
+
+  const navigateToPerson = () => {
+    navigate("/persons");
   };
 
   return (
