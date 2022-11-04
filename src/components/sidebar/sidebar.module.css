@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid var(--lightGreyColor);
-  height: 113px;
+  height: 15vh;
 }
 
 .sidebar-link {

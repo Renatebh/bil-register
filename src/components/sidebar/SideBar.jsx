@@ -1,5 +1,5 @@
 import { FaHome, FaUser, FaCar, FaUserPlus } from "react-icons/fa";
-import { AiFillSetting, AiFillFolderAdd } from "react-icons/ai";
+import { AiFillFolderAdd } from "react-icons/ai";
 import { MdAdminPanelSettings } from "react-icons/md";
 import { Link } from "react-router-dom";
 import style from "./sidebar.module.css";
