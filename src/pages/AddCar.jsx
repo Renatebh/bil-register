@@ -1,7 +1,7 @@
 import Navbar from "../components/nav/Navbar";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
 import AddCarForm from "../components/form/AddCarForm";
-import CarsList from "../components/cars/Car";
+import CarsList from "../components/cars/CarsList";
 import style from "./addCar.module.css";
 import SideBar from "../components/sidebar/SideBar";
 
