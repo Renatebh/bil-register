@@ -68,6 +68,10 @@ a:visited {
   width: 100%;
 }
 
+.login-btn:hover {
+  background-color: var(--lightGreyColor);
+}
+
 h1 {
   font-weight: bold;
   font-size: 30px;

@@ -44,31 +44,42 @@ const Form = () => {
 
   return (
     <div>
-      <form>
+      <form className={styles["form-update"]}>
         <fieldset>
           <h3>Oppdater person</h3>
-          <label htmlFor="">Fornavn</label>
+          <label className={styles["label"]} htmlFor="">
+            Fornavn
+          </label>
           <input
+            className={styles["form-input"]}
             type="text"
             name="firstName"
             placeholder={updatePerson.firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-          <label htmlFor="">Etternavn</label>
+          <label className={styles["label"]} htmlFor="">
+            Etternavn
+          </label>
           <input
+            className={styles["form-input"]}
             type="text"
             name="lastName"
             placeholder={updatePerson.lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-          <label htmlFor="">Alder</label>
+          <label className={styles["label"]} htmlFor="">
+            Alder
+          </label>
           <input
+            className={styles["form-input"]}
             type="number"
             name="age"
             placeholder={updatePerson.age}
             onChange={(e) => setAge(e.target.valueAsNumber)}
           />
-          <label htmlFor="">Velg bil</label>
+          <label className={styles["label"]} htmlFor="">
+            Velg bil
+          </label>
           <Dropdown changeCarId={changeCarId} />
           <input
             type="submit"
