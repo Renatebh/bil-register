@@ -1,6 +1,6 @@
+/* Endret til 90 her fra 100, siden nav er satt til 10vh */
 .sidebar-wrapper {
-  background-color: var(--secondaryColor);
-  height: 100vh;
+  height: 90vh;
 }
 
 .sidebar-list {
@@ -11,12 +11,13 @@
   width: 120px;
 }
 
+/* Endret height på denne fra 100px til 113, da forsvant scrollen */
 .sidebar-item {
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid var(--lightGreyColor);
-  height: 100px;
+  height: 113px;
 }
 
 .sidebar-link {
@@ -27,10 +28,17 @@
 }
 
 .sidebar-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 10px;
   color: var(--lightGreyColor);
 }
 
 .sidebar-icon {
   color: var(--lightGreyColor);
+}
+
+.sidebar-text:hover {
+  color: var(--secondaryColor);
 }

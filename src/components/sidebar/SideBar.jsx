@@ -6,58 +6,65 @@ import style from "./sidebar.module.css";
 
 const SideBar = () => {
   return (
-    <div className={style["sidebar-wrapper"]}>
-      <ul className={style["sidebar-list"]}>
-        <li className={style["sidebar-item"]}>
-          <Link className={style["sidebar-link"]} to="/home">
-            <FaHome size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Hjem</p>
-          </Link>
-        </li>
+    <>
+      <div className={style["sidebar-wrapper"]}>
+        <ul className={style["sidebar-list"]}>
+          <li className={style["sidebar-item"]}>
+            <Link className={style["sidebar-link"]} to="/home">
+              <p className={style["sidebar-text"]}>
+                <FaHome size={30} />
+                Hjem
+              </p>
+            </Link>
+          </li>
 
-        <li className={style["sidebar-item"]}>
-          <Link to="/persons" className={style["sidebar-link"]}>
-            <FaUser size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Personer</p>
-          </Link>
-        </li>
+          <li className={style["sidebar-item"]}>
+            <Link to="/persons" className={style["sidebar-link"]}>
+              <p className={style["sidebar-text"]}>
+                <FaUser size={30} />
+                Personer
+              </p>
+            </Link>
+          </li>
 
-        <li className={style["sidebar-item"]}>
-          <Link to="/addperson" className={style["sidebar-link"]}>
-            <FaUserPlus size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Legg til person</p>
-          </Link>
-        </li>
+          <li className={style["sidebar-item"]}>
+            <Link to="/addperson" className={style["sidebar-link"]}>
+              <p className={style["sidebar-text"]}>
+                <FaUserPlus size={30} />
+                Legg til person
+              </p>
+            </Link>
+          </li>
 
-        <li className={style["sidebar-item"]}>
-          <Link to="/cars" className={style["sidebar-link"]}>
-            <FaCar size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Biler</p>
-          </Link>
-        </li>
+          <li className={style["sidebar-item"]}>
+            <Link to="/cars" className={style["sidebar-link"]}>
+              <p className={style["sidebar-text"]}>
+                <FaCar size={30} />
+                Biler
+              </p>
+            </Link>
+          </li>
 
-        <li className={style["sidebar-item"]}>
-          <Link to="/addcar" className={style["sidebar-link"]}>
-            <AiFillFolderAdd size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Legg til bil</p>
-          </Link>
-        </li>
+          <li className={style["sidebar-item"]}>
+            <Link to="/addcar" className={style["sidebar-link"]}>
+              <p className={style["sidebar-text"]}>
+                <AiFillFolderAdd size={30} />
+                Legg til bil
+              </p>
+            </Link>
+          </li>
 
-        <li className={style["sidebar-item"]}>
-          <Link to="/" className={style["sidebar-link"]}>
-            <MdAdminPanelSettings size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Admin</p>
-          </Link>
-        </li>
-
-        <li className={style["sidebar-item"]}>
-          <Link to="/" className={style["sidebar-link"]}>
-            <AiFillSetting size={30} className={style["sidebar-icon"]} />
-            <p className={style["sidebar-text"]}>Settings</p>
-          </Link>
-        </li>
-      </ul>
-    </div>
+          <li className={style["sidebar-item"]}>
+            <Link to="/" className={style["sidebar-link"]}>
+              <p className={style["sidebar-text"]}>
+                <MdAdminPanelSettings size={30} />
+                Admin
+              </p>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 

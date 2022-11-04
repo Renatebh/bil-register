@@ -9,13 +9,6 @@ const Navbar = () => {
       <div>
         <Logo />
       </div>
-      <ul className={style["links-list"]}>
-        <li>
-          <Link to="/home" className={style["link-item"]}>
-            Hjem
-          </Link>
-        </li>
-      </ul>
     </nav>
   );
 };

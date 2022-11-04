@@ -1,6 +1,7 @@
 import CarList from "../components/cars/Car";
 import Navbar from "../components/nav/Navbar";
-import BigButtonsBox from "../components/buttons/BigButtonsBox";
+import SideBar from "../components/sidebar/SideBar";
+import styles from "./allCarsAndPersons.module.css";
 
 const Cars = () => {
   return (
@@ -8,9 +9,11 @@ const Cars = () => {
       <header>
         <Navbar />
       </header>
-      <main>
-        <BigButtonsBox />
-        <CarList />
+      <main className={styles["main-container"]}>
+        <SideBar />
+        <div className={styles["allCars-container"]}>
+          <CarList />
+        </div>
       </main>
     </>
   );

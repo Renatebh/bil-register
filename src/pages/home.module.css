@@ -2,17 +2,29 @@
 
 .main-wrapper {
   width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
-h3 {
+.cars-container, .persons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.cars-list-container,
+.persons-list-container {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.header-container {
   text-align: center;
 }
 
-.cars-container {
-  width: 50%;
-}
-
-.persons-container {
-  width: 50%;
+.header-container h3 {
+  font-size: 25px;
+  text-transform: uppercase;
 }

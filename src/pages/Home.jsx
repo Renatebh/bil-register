@@ -1,11 +1,8 @@
 import styles from "./home.module.css";
 import Navbar from "../components/nav/Navbar";
-import BigButtonsBox from "../components/buttons/BigButtonsBox";
-// import Cars from "../components/cars/Car";
-// import Persons from "../components/persons/Persons";
-import CarsList from "../components/cars/CarsList";
-import PersonsList from "../components/persons/PersonsList";
-
+import Cars from "../components/cars/Car";
+import Persons from "../components/persons/Persons";
+import SideBar from "../components/sidebar/SideBar";
 
 const Home = () => {
   return (
@@ -13,15 +10,25 @@ const Home = () => {
       <header>
         <Navbar />
       </header>
-        <BigButtonsBox />
       <main className={styles["main-wrapper"]}>
+        <div className={styles.sidebar}>
+          <SideBar />
+        </div>
         <div className={styles["cars-container"]}>
-          <h3>Cars</h3>
-          <CarsList />
+          <div className={styles["header-container"]}>
+            <h3>Biler</h3>
+          </div>
+          <div className={styles["cars-list-container"]}>
+            <Cars />
+          </div>
         </div>
         <div className={styles["persons-container"]}>
-          <h3>Personer</h3>
-          <PersonsList />
+          <div className={styles["header-container"]}>
+            <h3>Personer</h3>
+          </div>
+          <div className={styles["persons-list-container"]}>
+            <Persons />
+          </div>
         </div>
       </main>
     </>
