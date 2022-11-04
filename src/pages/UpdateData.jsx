@@ -1,6 +1,7 @@
 import Navbar from "../components/nav/Navbar";
 import UpdateCarForm from "../components/form/UpdateCarForm";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
+import Card from "../components/card/Card";
 
 const UpdateData = (id) => {
   return (
@@ -12,6 +13,7 @@ const UpdateData = (id) => {
         <BigButtonsBox />
 
         <UpdateCarForm value={id} />
+        <Card value={id} />
       </main>
     </>
   );

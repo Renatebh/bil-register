@@ -30,24 +30,34 @@ const Form = () => {
 
   return (
     <div>
-      <form>
+      <form className={styles["form-update"]}>
         <fieldset>
           <h3>Oppdater bil</h3>
+          <label className={styles["label"]} htmlFor="">
+            Merke
+          </label>
           <input
+            className={styles["form-input"]}
             type="text"
             name="make"
             placeholder={updateCar.make}
             onChange={(e) => setMake(e.target.value)}
           />
-          <label htmlFor="">Model</label>
+          <label className={styles["label"]} htmlFor="">
+            Model
+          </label>
           <input
+            className={styles["form-input"]}
             type="text"
             name="model"
             placeholder={updateCar.model}
             onChange={(e) => setModel(e.target.value)}
           />
-          <label htmlFor="">Year</label>
+          <label className={styles["label"]} htmlFor="">
+            Årsmodell
+          </label>
           <input
+            className={styles["form-input"]}
             type="number"
             name="year"
             placeholder={updateCar.year}

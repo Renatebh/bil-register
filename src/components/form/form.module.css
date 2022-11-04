@@ -55,3 +55,17 @@ span {
 .form-input:valid[focused="true"] {
   border: 2px solid rgb(73, 241, 73);
 }
+
+.label {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+.form-update {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
