@@ -4,6 +4,7 @@ import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import Dropdown from "../dropdown/Dropdown";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const { personID } = useParams();
@@ -16,6 +17,7 @@ const Form = () => {
   const [carId, setCarId] = useState({ carsOwned: "" });
   const [postData, setPostData] = useState({});
   const joinedData = { ...firstName, ...lastName, ...age, ...carId };
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPostData(joinedData);
@@ -40,6 +42,11 @@ const Form = () => {
       ...postData
     });
     alert("Data updated");
+    navigateToPersons();
+  };
+
+  const navigateToPersons = () => {
+    navigate("/persons");
   };
 
   return (

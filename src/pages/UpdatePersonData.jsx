@@ -11,9 +11,7 @@ const UpdatePersonData = (id) => {
       </header>
       <main>
         <BigButtonsBox />
-
         <UpdatePersonForm value={id} />
-        <PersonCard value={id} />
       </main>
     </>
   );
