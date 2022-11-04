@@ -2,6 +2,7 @@ import Navbar from "../components/nav/Navbar";
 import UpdateCarForm from "../components/form/UpdateCarForm";
 import Card from "../components/card/Card";
 import SideBar from "../components/sidebar/SideBar";
+import styles from "./updateData.module.css";
 
 const UpdateData = (id) => {
   return (
@@ -9,10 +10,14 @@ const UpdateData = (id) => {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main className={styles["main-container"]}>
         <SideBar />
-        <UpdateCarForm value={id} />
-        <Card value={id} />
+        <div className={styles["form-container"]}>
+          <UpdateCarForm value={id} />
+        </div>
+        <div className={styles["data-container"]}>
+          <Card value={id} />
+        </div>
       </main>
     </>
   );

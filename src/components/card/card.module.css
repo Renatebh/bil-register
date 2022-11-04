@@ -14,7 +14,7 @@
 .persons-card {
   border: 1px solid black;
   width: 230px;
-  height: 385px;
+  height: 340px;
 }
 
 h3 {
@@ -28,7 +28,7 @@ h3 {
 
 .persons-card li {
   list-style: none;
-  padding: 2px 0px;
+  /* padding: 2px 0px; */
 }
 
 .card-info-container {
