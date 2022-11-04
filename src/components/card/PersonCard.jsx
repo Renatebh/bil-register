@@ -26,10 +26,10 @@ const Card = (props) => {
       </div>
       <ul className={styles["person-info"]}>
         <li>Id: {props.id}</li>
-        <li>FirstName: {props.firstName}</li>
-        <li>LastName: {props.lastName}</li>
-        <li>Age: {props.age}</li>
-        <li>carsOwned: {props.carsOwned}</li>
+        <li>Navn: {props.firstName}</li>
+        <li>Etternavn: {props.lastName}</li>
+        <li>Alder: {props.age}</li>
+        <li>Biler som eies: {props.carsOwned}</li>
       </ul>
       <div className={styles["button-container-persons"]}>
         <button
