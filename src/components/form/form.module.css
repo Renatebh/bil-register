@@ -1,5 +1,6 @@
 fieldset {
   width: 400px;
+  height: 450px;
   padding: 2rem;
   border-radius: 10px;
   background-color: var(--blackTransparent);
@@ -17,7 +18,8 @@ fieldset {
   width: 100%;
 }
 
-.form-input {
+.form-input,
+.dropdown {
   width: 100%;
   border-radius: 10px;
   padding: 10px;

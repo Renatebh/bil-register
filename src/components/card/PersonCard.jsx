@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./card.module.css";
+import styles from "../card/card.module.css";
 import picture from "../card/dawood.jpg";
 
 const Card = (props) => {

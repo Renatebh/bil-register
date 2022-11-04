@@ -8,6 +8,7 @@
   --white: #fff;
   --blackTransparent: rgba(0, 0, 0, 0.74);
   --greyColor: #525252;
+  --lightGreyColor: #808080;
 
   /* GRADIENT COLORS */
   --gradientColor: linear-gradient(
@@ -25,7 +26,7 @@
   );
   /* BOX SHADOWS */
   --box-shadow-light: 7px 0px 100px 2px #fff;
-  --box-shadow-medium: 6px 6px 24px 1px #bababa;
+  --box-shadow-medium: 7px 7px 20px 0px var(--greyColor);
   --box-shadow-dark: 1px -1px 30px 1px rgb(15, 15, 15);
   /* FONT TYPES */
   --header-font: "Varela Round", sans-serif;

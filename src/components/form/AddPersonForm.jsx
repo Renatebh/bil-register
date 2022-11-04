@@ -40,7 +40,7 @@ const Form = () => {
     <div>
       <form>
         <fieldset>
-          <h3>Registrer ny person</h3>
+          <h3 className={styles["form-header"]}>Registrer ny person</h3>
           {inputsPersons.map((input) => {
             return (
               <FormInput

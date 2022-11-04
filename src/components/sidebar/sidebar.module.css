@@ -1,0 +1,36 @@
+.sidebar-wrapper {
+  background-color: var(--secondaryColor);
+  height: 100vh;
+}
+
+.sidebar-list {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 120px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--lightGreyColor);
+  height: 100px;
+}
+
+.sidebar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-text {
+  font-size: 10px;
+  color: var(--lightGreyColor);
+}
+
+.sidebar-icon {
+  color: var(--lightGreyColor);
+}

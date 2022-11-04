@@ -1,7 +1,65 @@
+* {
+  list-style: none;
+}
+
+/* PERSON.JSX STYLE */
 .person-wrapper {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+/* PERSONLIST.JSX STYLE */
+.list-wrapper {
+  height: 395px;
+  overflow-y: scroll;
+}
+
+.person-tabel {
+  width: 600px;
+  /* height: 450px; */
+}
+
+.person-item-header,
+.person-item {
+  width: 150px;
+  padding: 1rem;
+}
+.person-list-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--greyColor);
+}
+.person-item-icon {
+  display: flex;
+  margin-left: 1rem;
+  width: 30px;
+}
+
+.person-image {
+  width: 30px;
+  height: 30px;
+  object-fit: fill;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.person-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(204, 240, 240);
+  border-bottom: 1px solid var(--greyColor);
+}
+
+.cars-owned {
+  display: flex;
+  gap: 5px;
 }

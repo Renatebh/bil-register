@@ -3,29 +3,35 @@ import PersonCard from "../card/PersonCard";
 import styles from "./person.module.css";
 
 const Person = () => {
-  const { personsData, carsData, loading, error } = useFetch(
-    "http://194.32.107.29/GaAPI"
-  );
+  const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
 
   if (loading) return <h1>Loading...</h1>;
   if (error) console.log(error);
 
-  // console.log(carsData);
-  // console.log(personsData);
   return (
     <>
       <div className={styles["person-wrapper"]}>
-        {personsData &&
-          carsData &&
-          personsData.map((value, index) => {
+        {data.persons &&
+          data.persons.map((person, index) => {
             return (
               <PersonCard
                 key={index}
-                id={value.id}
-                firstName={value.firstName}
-                lastName={value.lastName}
-                age={value.age}
-                carsOwned={value.carsOwned}
+                id={person.id}
+                firstName={person.firstName}
+                lastName={person.lastName}
+                age={person.age}
+                carsOwned={data.cars.map((car) => {
+                  if (car.id === parseInt(person.carsOwned)) {
+                    return (
+                      <div className={styles["cars-owned"]} key={car.id}>
+                        <p>{car.make}</p>
+                        <p>{car.model}</p>
+                      </div>
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
               />
             );
           })}

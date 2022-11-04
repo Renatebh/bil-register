@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
+import styles from "../form/form.module.css";
+
 const Dropdown = ({ changeCarId }) => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
   const [carSelected, setCarSelected] = useState([]);
@@ -15,18 +17,15 @@ const Dropdown = ({ changeCarId }) => {
   const handleChange = (e) => {
     setCarSelected(e.target.value);
   };
-  console.log([data]);
+  // console.log([data]);
 
   return (
     <>
-      <select onChange={handleChange}>
+      <select className={styles.dropdown} onChange={handleChange}>
         <option value="">Choose a Car</option>
         {data.cars &&
           data.cars.map((index, value) => (
-            <option
-              value={[index.make, index.model, index.year]}
-              key={index.id}
-            >
+            <option value={[index.id]} key={index.id}>
               {index.id}
               {index.make} {index.model}
             </option>
