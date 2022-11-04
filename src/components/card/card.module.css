@@ -102,11 +102,12 @@ h3 {
 }
 
 .image-container {
-  height: 50%;
+  height: 171px;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
+  
 }
 

@@ -28,6 +28,7 @@
   width: 150px;
   padding: 1rem;
 }
+
 .person-list-header {
   font-weight: bold;
   text-transform: uppercase;
@@ -37,6 +38,7 @@
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--greyColor);
 }
+
 .person-item-icon {
   display: flex;
   margin-left: 1rem;
