@@ -18,10 +18,10 @@ const AddCar = () => {
         <div className={style.sidebar}>
           <SideBar />
         </div>
-        <div className={style.AddCarForm}>
+        <div className={style.addCarForm}>
           <AddCarForm />
         </div>
-        <div className={style.CarsList}>
+        <div className={style.carsList}>
           <CarsList />
         </div>
       </main>

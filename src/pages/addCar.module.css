@@ -6,7 +6,7 @@
   grid-template-rows: 20% 100%;
   grid-template-areas:
     "sidebar bigButtonsBox  bigButtonsBox ."
-    "sidebar addcarform   carlist .";
+    "sidebar addcarForm   carList .";
 }
 
 .bigButtonsBox {
@@ -19,14 +19,14 @@
   grid-area: sidebar;
 }
 
-.addcarForm {
-  grid-area: addcarform;
+.addCarForm {
+  grid-area: addcarForm;
   display: flex;
   justify-content: center;
 }
 
 .carsList {
-  grid-area: carlist;
+  grid-area: carList;
   display: flex;
   justify-content: center;
 }
