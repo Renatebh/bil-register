@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aqua;
 }
 .sidebar {
   grid-area: sidebar;
@@ -24,12 +23,10 @@
   grid-area: addpersonform;
   display: flex;
   justify-content: center;
-  background-color: blanchedalmond;
 }
 
 .personsList {
   grid-area: personlist;
   display: flex;
   justify-content: center;
-  background-color: blueviolet;
 }
