@@ -19,27 +19,17 @@
   margin-bottom: 30px;
 }
 
-/* .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem 0.5rem;
-} */
-
-section {
+.section {
   width: 100%;
   width: 400px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   padding: 1rem;
   background-color: var(--secondaryColor);
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -52,17 +42,20 @@ a:visited {
   color: #fff;
 }
 
-input[type="text"],
-input[type="password"],
-textarea,
+.input[type="text"],
+.input[type="password"],
 .login-btn {
-  font-family: "Nunito", sans-serif;
-  /* font-size: 22px; */
-  /* padding: 0.25rem; */
-  /* border-radius: 0.5rem; */
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: text;
 }
 
-label,
+.label,
 .login-btn {
   margin-top: 1rem;
 }

@@ -44,7 +44,7 @@ const Login = () => {
       {success ? (
         <Navigate replace to="/home" />
       ) : (
-        <section>
+        <section className={styles["section"]}>
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -53,9 +53,12 @@ const Login = () => {
             {errMsg}
           </p>
           <h1>Login</h1>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
+          <form onSubmit={handleSubmit} className={styles["form"]}>
+            <label className={styles["label"]} htmlFor="username">
+              Username:
+            </label>
             <input
+              className={styles["input"]}
               type="text"
               id="username"
               ref={userRef}
@@ -67,6 +70,7 @@ const Login = () => {
 
             <label htmlFor="password">Password:</label>
             <input
+              className={styles["input"]}
               type="password"
               id="password"
               onChange={(e) => setPwd(e.target.value)}
