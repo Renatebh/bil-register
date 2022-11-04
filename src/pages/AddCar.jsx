@@ -1,5 +1,4 @@
 import Navbar from "../components/nav/Navbar";
-import BigButtonsBox from "../components/buttons/BigButtonsBox";
 import AddCarForm from "../components/form/AddCarForm";
 import CarsList from "../components/cars/CarsList";
 import style from "./addCar.module.css";
@@ -12,9 +11,6 @@ const AddCar = () => {
         <Navbar />
       </header>
       <main className={style.wrapper}>
-        <div className={style.bigButtonsBox}>
-          <BigButtonsBox />
-        </div>
         <div className={style.sidebar}>
           <SideBar />
         </div>
