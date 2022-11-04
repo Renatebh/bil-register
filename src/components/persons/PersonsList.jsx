@@ -23,10 +23,10 @@ const PersonsList = () => {
         </ul>
         <div className={styles["list-wrapper"]}>
           {data.persons &&
-            data.persons.map((person, index) => {
+            data.persons.map((person) => {
               return (
                 <>
-                  <ul key={index} className={styles["person-list"]}>
+                  <ul key={person.id} className={styles["person-list"]}>
                     <li>
                       <img
                         className={styles["person-image"]}
@@ -40,11 +40,11 @@ const PersonsList = () => {
                     </li>
                     <li className={styles["person-item"]}>{person.lastName}</li>
                     <li className={styles["person-item"]}>
-                      {data.cars.map((car) => {
+                      {data.cars.map((car, index) => {
                         if (car.id === parseInt(person.carsOwned)) {
                           return (
-                            <div className={styles["cars-owned"]} key={car.id}>
-                              <p>{car.make}</p>
+                            <div key={index.id}>
+                              <p className={styles["cars-owned"]}>{car.make}</p>
                               <p>{car.model}</p>
                             </div>
                           );

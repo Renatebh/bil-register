@@ -6,7 +6,7 @@
   grid-template-rows: 20% 100%;
   grid-template-areas:
     "sidebar bigButtonsBox  bigButtonsBox ."
-    "sidebar addpersonform   personlist .";
+    "sidebar addpersonForm   personsList .";
 }
 
 .bigButtonsBox {
@@ -20,13 +20,13 @@
 }
 
 .addPersonForm {
-  grid-area: addpersonform;
+  grid-area: addpersonForm;
   display: flex;
   justify-content: center;
 }
 
 .personsList {
-  grid-area: personlist;
+  grid-area: personsList;
   display: flex;
   justify-content: center;
 }
