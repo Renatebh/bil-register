@@ -25,21 +25,19 @@ const CarsList = () => {
           {data.cars &&
             data.cars.map((car, index) => {
               return (
-                <>
-                  <ul key={index} className={styles["car-list"]}>
-                    <li>
-                      <img
-                        className={styles["car-image"]}
-                        src={image}
-                        alt="Bildet av en Audi"
-                      />
-                    </li>
-                    <li className={styles["car-item"]}> {car.id}</li>
-                    <li className={styles["car-item"]}>{car.make}</li>
-                    <li className={styles["car-item"]}>{car.model}</li>
-                    <li className={styles["car-item"]}>{car.year}</li>
-                  </ul>
-                </>
+                <ul key={car.id} className={styles["car-list"]}>
+                  <li>
+                    <img
+                      className={styles["car-image"]}
+                      src={image}
+                      alt="Bildet av en Audi"
+                    />
+                  </li>
+                  <li className={styles["car-item"]}> {car.id}</li>
+                  <li className={styles["car-item"]}>{car.make}</li>
+                  <li className={styles["car-item"]}>{car.model}</li>
+                  <li className={styles["car-item"]}>{car.year}</li>
+                </ul>
               );
             })}
         </div>

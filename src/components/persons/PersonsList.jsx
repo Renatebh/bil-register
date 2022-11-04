@@ -25,23 +25,21 @@ const PersonsList = () => {
           {data.persons &&
             data.persons.map((person) => {
               return (
-                <>
-                  <ul key={person.id} className={styles["person-list"]}>
-                    <li>
-                      <img
-                        className={styles["person-image"]}
-                        src={image}
-                        alt="Bildet av en person"
-                      />
-                    </li>
-                    <li className={styles["person-item"]}> {person.id}</li>
-                    <li className={styles["person-item"]}>
-                      {person.firstName}
-                    </li>
-                    <li className={styles["person-item"]}>{person.lastName}</li>
-                    <li className={styles["person-item"]}>
-                      {data.cars.map((car, index) => {
-                        if (car.id === parseInt(person.carsOwned)) {
+                <ul key={person.id} className={styles["person-list"]}>
+                  <li>
+                    <img
+                      className={styles["person-image"]}
+                      src={image}
+                      alt="Bildet av en person"
+                    />
+                  </li>
+                  <li className={styles["person-item"]}> {person.id}</li>
+                  <li className={styles["person-item"]}>{person.firstName}</li>
+                  <li className={styles["person-item"]}>{person.lastName}</li>
+                  <li className={styles["person-item"]}>
+                    {data.cars &&
+                      data.cars.map((car, index) => {
+                        if (index.id === parseInt(person.carsOwned)) {
                           return (
                             <div key={index.id}>
                               <p className={styles["cars-owned"]}>{car.make}</p>
@@ -52,9 +50,8 @@ const PersonsList = () => {
                           return null;
                         }
                       })}
-                    </li>
-                  </ul>
-                </>
+                  </li>
+                </ul>
               );
             })}
         </div>
