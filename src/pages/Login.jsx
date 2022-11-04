@@ -1,8 +1,11 @@
 import { useRef, useState, useEffect } from "react";
+import styles from "./login.module.css";
+import bilregisterLogo from "../components/logo/bilregister_logo.png";
+import { Navigate } from "react-router-dom";
 
 const Login = () => {
-  const userRef = useRef<HTMLInputElement>(null);
-  const errRef = useRef<any>();
+  const userRef = useRef();
+  const errRef = useRef();
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
@@ -10,33 +13,36 @@ const Login = () => {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    if (userRef.current != null) {
-      userRef.current.focus();
-    }
-  }, []);
-
-  useEffect(() => {
     setErrMsg("");
   }, [user, pwd]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user, pwd);
-    setUser("");
-    setPwd("");
-    setSuccess(true);
+
+    if (user === "admin" && pwd === "admin") {
+      setSuccess(true);
+    } else if (user !== "admin" && pwd !== "admin") {
+      setErrMsg("Feil username og passord");
+    } else if (user || pwd !== "admin") {
+      if (user !== "admin") {
+        setErrMsg("Feil username");
+      } else if (pwd !== "admin") {
+        setErrMsg("Feil passord");
+      }
+    }
   };
 
   return (
-    <>
+    <div className={styles["login-background"]}>
+      <div className={styles["img-container"]}>
+        <img
+          src={bilregisterLogo}
+          alt="Bilregister logo"
+          className={styles["bilregister-logo"]}
+        />
+      </div>
       {success ? (
-        <section>
-          n<h1>You are logged in!</h1>
-          <br />
-          <p>
-            <a href="#">Go to Home</a>
-          </p>
-        </section>
+        <Navigate replace to="/home" />
       ) : (
         <section>
           <p
@@ -67,11 +73,11 @@ const Login = () => {
               value={pwd}
               required
             />
-            <button>Login</button>
+            <button className={styles["login-btn"]}>Login</button>
           </form>
         </section>
       )}
-    </>
+    </div>
   );
 };
 

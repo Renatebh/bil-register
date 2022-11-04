@@ -1,0 +1,112 @@
+@import "../../varibles/variables.module.css";
+
+.card {
+  border: 1px solid black;
+  width: 280px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.persons-card {
+  border: 1px solid black;
+  width: 230px;
+  height: 342px;
+}
+
+h3 {
+  margin-bottom: 2rem;
+  
+}
+
+.card li {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.persons-card li {
+  list-style: none;
+  padding: 2px 0px;
+}
+
+.card-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-info-container div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.middle-line {
+  margin-top: 1rem;
+}
+
+.person-info {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.button-container {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-container button {
+  background-color: var(--primaryColor);
+  padding: 8px 28px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.button-container button:hover {
+  background-color: var(--secondaryColor);
+}
+
+.button-container-persons {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-container-persons button {
+  background-color: var(--primaryColor);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.button-container-persons button:hover {
+  background-color: var(--secondaryColor);
+}
+
+.image-container {
+  height: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+

@@ -1,0 +1,18 @@
+@import "../varibles/variables.module.css";
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+h3 {
+  text-align: center;
+}
+
+.cars-container {
+  width: 50%;
+}
+
+.persons-container {
+  width: 50%;
+}

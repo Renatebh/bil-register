@@ -1,0 +1,23 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import style from "./navbar.module.css";
+import Logo from "../logo/Logo";
+
+const Navbar = () => {
+  return (
+    <nav className={style.navbar}>
+      <div>
+        <Logo />
+      </div>
+      <ul className={style["links-list"]}>
+        <li>
+          <Link to="/home" className={style["link-item"]}>
+            Hjem
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
