@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import styles from "./car.module.css";
 import image from "../../components/card/car.jpg";
-import { FaUser } from "react-icons/fa";
+import { FaCar } from "react-icons/fa";
 
 const CarsList = () => {
   const { data, loading, error } = useFetch("http://194.32.107.29/GaAPI");
@@ -14,7 +14,7 @@ const CarsList = () => {
       <div className={styles["car-tabel"]}>
         <ul className={styles["car-list-header"]}>
           <li className={styles["car-item-icon"]}>
-            <FaUser size={20} />
+            <FaCar size={20} />
           </li>
           <li className={styles["car-item-header"]}>ID</li>
           <li className={styles["car-item-header"]}>Merke</li>
