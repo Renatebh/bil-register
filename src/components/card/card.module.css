@@ -14,12 +14,11 @@
 .persons-card {
   border: 1px solid black;
   width: 230px;
-  height: 342px;
+  height: 385px;
 }
 
 h3 {
   margin-bottom: 2rem;
-  
 }
 
 .card li {
@@ -109,4 +108,3 @@ h3 {
   width: 100%;
   height: 100%;
 }
-

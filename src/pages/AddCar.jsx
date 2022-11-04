@@ -1,19 +1,29 @@
 import Navbar from "../components/nav/Navbar";
 import BigButtonsBox from "../components/buttons/BigButtonsBox";
 import AddCarForm from "../components/form/AddCarForm";
-import CarList from "../components/cars/Car";
-import styles from "./addCar.module.css";
+import CarsList from "../components/cars/Car";
+import style from "./addCar.module.css";
+import SideBar from "../components/sidebar/SideBar";
 
 const AddCar = () => {
   return (
     <>
       <header>
         <Navbar />
-        <BigButtonsBox />
       </header>
-      <main className={styles["main-wrapper"]}>
-        <AddCarForm />
-        <CarList />
+      <main className={style.wrapper}>
+        <div className={style.bigButtonsBox}>
+          <BigButtonsBox />
+        </div>
+        <div className={style.sidebar}>
+          <SideBar />
+        </div>
+        <div className={style.AddCarForm}>
+          <AddCarForm />
+        </div>
+        <div className={style.CarsList}>
+          <CarsList />
+        </div>
       </main>
     </>
   );
