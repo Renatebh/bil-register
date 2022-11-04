@@ -32,7 +32,7 @@ const Form = () => {
     <div>
       <form className={styles["form-update"]}>
         <fieldset>
-          <h3>Oppdater bil</h3>
+          <h3 className={styles["text-form"]}>Oppdater bil</h3>
           <label className={styles["label"]} htmlFor="">
             Merke
           </label>

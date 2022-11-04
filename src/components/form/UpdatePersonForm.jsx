@@ -46,7 +46,7 @@ const Form = () => {
     <div>
       <form className={styles["form-update"]}>
         <fieldset>
-          <h3>Oppdater person</h3>
+          <h3 className={styles["text-form"]}>Oppdater person</h3>
           <label className={styles["label"]} htmlFor="">
             Fornavn
           </label>
